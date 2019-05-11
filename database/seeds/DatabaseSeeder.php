@@ -22,8 +22,8 @@ class DatabaseSeeder extends Seeder
 
             // Creating me :)
             factory('App\User')->create([
-                'name' => 'Nasmed',
-                'email' => 'med.nasserallah@gmail.com'
+                'name' => 'JustMe',
+                'email' => 'someone@here.com'
             ]);
         }
     }
