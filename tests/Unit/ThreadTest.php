@@ -31,6 +31,7 @@ class ThreadTest extends TestCase
     {
         $this->assertInstanceOf('App\User', $this->thread->creator);
     }
+
     /** @test */
     public function a_thread_belongs_to_a_channel()
     {
@@ -104,5 +105,17 @@ class ThreadTest extends TestCase
         $this->thread->subscribe();
 
         $this->assertTrue($this->thread->isSubscribedTo);
+    }
+
+    /** @test */
+    public function a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies()
+    {
+        $this->signIn();
+
+        $this->assertTrue($this->thread->hasUpdates());
+
+        auth()->user()->seen($this->thread);
+
+        $this->assertFalse($this->thread->hasUpdates());
     }
 }

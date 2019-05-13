@@ -27,6 +27,8 @@ class Reply extends Model
 
     protected $appends = ['favorites_count', 'is_favorited'];
 
+    protected $touches = ['thread'];
+
     public function owner()
     {
         return $this->belongsTo(User::class, 'user_id');

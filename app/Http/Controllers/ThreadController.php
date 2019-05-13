@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Channel;
 use App\Filters\ThreadFilter;
 use App\Thread;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ThreadController extends Controller
@@ -70,9 +71,14 @@ class ThreadController extends Controller
      *
      * @param Thread $thread
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function show($channel, Thread $thread)
     {
+        if (\Auth::check()) {
+            \Auth::user()->seen($thread);
+        }
+
         return view('threads/show', compact('thread'));
     }
 

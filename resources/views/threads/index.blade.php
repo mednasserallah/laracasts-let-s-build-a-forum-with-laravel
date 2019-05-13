@@ -21,7 +21,13 @@
 
                                 <h4 class="card-title flex">
                                     <a href="{{ route('threads.show', [ $thread->channel->slug, $thread->id ]) }}">
-                                        {{ $thread->title }}
+                                        @if ($thread->hasUpdates())
+                                            <strong>
+                                                {{ $thread->title }}
+                                            </strong>
+                                        @else
+                                            {{ $thread->title }}
+                                        @endif
                                     </a>
                                 </h4>
 

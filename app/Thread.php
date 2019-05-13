@@ -97,4 +97,15 @@ class Thread extends Model
     {
         return $this->isSubscribedTo();
     }
+
+    public function hasUpdates()
+    {
+        if (! \Auth::check()) {
+            return true;
+        }
+
+        $key = \Auth::user()->visitedThreadCacheKey($this);
+
+        return $this->updated_at > cache($key);
+    }
 }
