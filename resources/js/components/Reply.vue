@@ -106,6 +106,8 @@
                         this.editing = false;
 
                         flash('Your data has been updated !');
+                    }).catch(error => {
+                        flash(error.response.data, 'danger');
                     });
             },
 

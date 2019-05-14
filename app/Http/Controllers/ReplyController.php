@@ -21,18 +21,23 @@ class ReplyController extends Controller
      * @param $channelId
      * @param Thread $thread
      * @param  \Illuminate\Http\Request $request
-     * @param Spam $spam
      * @return \Illuminate\Http\Response
-     * @throws \Illuminate\Validation\ValidationException
      */
     public function store($channelId, Thread $thread, Request $request)
     {
-        $data = $this->validateReply($request);
+        try {
+            $data = $this->validateReply($request);
 
-        return ($thread->addReply([
-            'body' => $data['body'],
-            'user_id' => \Auth::id()
-        ]))->load('owner');
+            $reply = $thread->addReply([
+                'body' => $data['body'],
+                'user_id' => \Auth::id()
+            ])->load('owner');
+        } catch (\Exception $e) {
+            return response('Sorry, your reply could not be saved at this time.', 422);
+        }
+
+        return $reply;
+
     }
 
     public function destroy(Reply $reply)
@@ -48,11 +53,15 @@ class ReplyController extends Controller
     {
         $this->authorize('update', $reply);
 
-        $data = $this->validateReply($request);
+        try {
+            $data = $this->validateReply($request);
 
-        $reply->update([
-            'body' => $data['body']
-        ]);
+            $reply->update([
+                'body' => $data['body']
+            ]);
+        } catch (\Exception $e) {
+            return response('Sorry, your reply could not be saved at this time.', 422);
+        }
 
         return response([], 200);
     }

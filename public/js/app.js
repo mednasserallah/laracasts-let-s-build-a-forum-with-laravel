@@ -1835,12 +1835,14 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       body: this.message,
+      level: 'success',
       show: false
     };
   },
   methods: {
-    flash: function flash(message) {
-      this.body = message;
+    flash: function flash(data) {
+      this.body = data.message;
+      this.level = data.level;
       this.show = true;
       this.hide();
     },
@@ -1859,8 +1861,8 @@ __webpack_require__.r(__webpack_exports__);
       this.flash(this.message);
     }
 
-    window.events.$on('flash', function (message) {
-      _this2.flash(message);
+    window.events.$on('flash', function (data) {
+      _this2.flash(data);
     });
   }
 });
@@ -1926,6 +1928,8 @@ __webpack_require__.r(__webpack_exports__);
         _this.$emit('reply-created', data);
 
         flash('Your reply has been posted.');
+      })["catch"](function (error) {
+        flash(error.response.data, 'danger');
       });
     }
   }
@@ -2199,6 +2203,8 @@ __webpack_require__.r(__webpack_exports__);
         _this2.data.body = _this2.reply.body;
         _this2.editing = false;
         flash('Your data has been updated !');
+      })["catch"](function (error) {
+        flash(error.response.data, 'danger');
       });
     },
     cancelEdit: function cancelEdit() {
@@ -56004,10 +56010,11 @@ var render = function() {
       directives: [
         { name: "show", rawName: "v-show", value: _vm.show, expression: "show" }
       ],
-      staticClass: "alert alert-success alert-flash",
+      staticClass: "alert alert-flash",
+      class: "alert-" + _vm.level,
       attrs: { role: "alert" }
     },
-    [_c("strong", [_vm._v("Success!")]), _vm._v(" " + _vm._s(_vm.body) + "\n")]
+    [_vm._v("\n    " + _vm._s(_vm.body) + "\n")]
   )
 }
 var staticRenderFns = []
@@ -68695,7 +68702,11 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 window.events = new Vue();
 
 window.flash = function (message) {
-  window.events.$emit('flash', message);
+  var level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'success';
+  window.events.$emit('flash', {
+    message: message,
+    level: level
+  });
 };
 
 window.Vue.prototype.authorize = function (handler) {
@@ -69473,8 +69484,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Web Projects\Homestead\laravel\forum\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\Web Projects\Homestead\laravel\forum\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\web projects\homestead\laravel\forum\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\web projects\homestead\laravel\forum\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
