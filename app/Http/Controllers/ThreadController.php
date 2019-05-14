@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Channel;
 use App\Filters\ThreadFilter;
-use App\Inspections\Spam;
+use App\Rules\SpamFree;
 use App\Thread;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ThreadController extends Controller
@@ -46,15 +45,13 @@ class ThreadController extends Controller
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request, Spam $spam)
+    public function store(Request $request)
     {
         $data = $this->validate($request, [
-            'title' => 'required|string',
-            'body' => 'required|string',
+            'title' => ['required', 'string', new SpamFree],
+            'body' => ['required', 'string', new SpamFree],
             'channel_id' => 'required|integer|exists:channels,id'
         ]);
-
-        $spam->detect($data['body']);
 
         $thread = Thread::create([
             'title' => $data['title'],
@@ -88,7 +85,7 @@ class ThreadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -99,8 +96,8 @@ class ThreadController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -133,8 +130,8 @@ class ThreadController extends Controller
     protected function getThreads(Channel $channel, ThreadFilter $filters)
     {
         $threads = Thread::query()
-                ->latest()
-                ->filter($filters);
+            ->latest()
+            ->filter($filters);
 
         if ($channel->exists) {
             $threads = $channel->threads();

@@ -2,10 +2,8 @@
 
 namespace Tests\Feature;
 
-use mysql_xdevapi\Exception;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class ParticipateInForumTest extends TestCase
 {
@@ -60,7 +58,7 @@ class ParticipateInForumTest extends TestCase
         $this->post($this->thread->path() . '/replies', $reply->toArray())
             ->assertSessionHasErrors('body');
     }
-    
+
     /** @test */
     public function guests_cannot_delete_replies()
     {
@@ -151,7 +149,7 @@ class ParticipateInForumTest extends TestCase
             'body' => 'You\'ve been changed, fool!'
         ]);
     }
-    
+
     /** @test */
     public function replies_that_contain_spam_may_not_be_created()
     {
