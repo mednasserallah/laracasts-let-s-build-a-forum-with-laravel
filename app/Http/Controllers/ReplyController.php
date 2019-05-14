@@ -25,13 +25,9 @@ class ReplyController extends Controller
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store($channelId, Thread $thread, Request $request, Spam $spam)
+    public function store($channelId, Thread $thread, Request $request)
     {
-        $data = $this->validate($request, [
-            'body' => 'required|string',
-        ]);
-
-        $spam->detect($data['body']);
+        $data = $this->validateReply($request);
 
         return ($thread->addReply([
             'body' => $data['body'],
@@ -52,10 +48,29 @@ class ReplyController extends Controller
     {
         $this->authorize('update', $reply);
 
+        $data = $this->validateReply($request);
+
         $reply->update([
-            'body' => $request['body']
+            'body' => $data['body']
         ]);
 
         return response([], 200);
+    }
+
+    /**
+     * @param Request $request
+     * @param Spam $spam
+     * @return array
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function validateReply(Request $request): array
+    {
+        $data = $this->validate($request, [
+            'body' => 'required|string',
+        ]);
+
+        resolve(Spam::class)->detect($data['body']);
+
+        return $data;
     }
 }

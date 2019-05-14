@@ -13,7 +13,7 @@ class ThreadPolicy
     public function before($user)
     {
         // Nasmed is the Admin.
-        if ($user->name === 'Nasmed') return true;
+//        if ($user->name === 'Nasmed') return true;
     }
 
     /**

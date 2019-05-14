@@ -7,7 +7,7 @@ namespace App\Inspections;
 class KeyHeldDown
 {
     protected $patterns = [
-        '/(.)\\1{4,}/'
+        '/(.)\\1{4,}/u'
     ];
 
     public function detect($body)
