@@ -3,7 +3,7 @@
 
 namespace Tests\Unit;
 
-use App\Spam;
+use App\Inspections\Spam;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -11,11 +11,33 @@ class SpamTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
-    public function it_validates_spam()
-    {
-        $spam = new Spam();
+    private $spam;
 
-        $this->assertFalse($spam->detect('Innocent body here'));
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->spam = new Spam();
+    }
+
+    /** @test */
+    public function it_checks_for_invalid_keywords()
+    {
+        $this->assertFalse($this->spam->detect('Innocent body here'));
+
+        $this->expectException(\Exception::class);
+
+        $this->spam->detect('Yahoo customer support');
+
+    }
+    
+    /** @test */
+    public function it_checks_for_any_key_being_held_down()
+    {
+        $this->assertFalse($this->spam->detect('Hello, Words!'));
+
+        $this->expectException(\Exception::class);
+
+        $this->spam->detect('Hello worddddddds');
     }
 }
