@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Spam.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/SpamTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/NotifyThreadSubscribers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/NotifyThreadSubscribers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/ThreadWasUpdated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ThreadWasUpdated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,35 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Thread.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-              <folding>
-                <element signature="e#23#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="57" column="53" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="53" />
-              <folding>
-                <element signature="e#23#41#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="480">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -68,8 +39,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>u</find>
-      <find>body</find>
       <find>fav</find>
       <find>submit</find>
       <find>$</find>
@@ -98,6 +67,8 @@
       <find>a</find>
       <find>notif</find>
       <find>ad</find>
+      <find>Laravel</find>
+      <find>contain</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Web Projects\Homestead\laravel\forum\resources</dir>
@@ -109,8 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" />
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/sass/_variables.scss" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FavoriteController.php" />
         <option value="$PROJECT_DIR$/tests/Feature/FavoriteTest.php" />
@@ -124,7 +93,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Paginator.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/Replies.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_28_215154_create_threads_table.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" />
         <option value="$PROJECT_DIR$/app/Filters/FilterTest.php" />
@@ -141,7 +109,6 @@
         <option value="$PROJECT_DIR$/database/factories/NotificationFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/NotificationTest.php" />
         <option value="$PROJECT_DIR$/resources/js/pages/Thread.vue" />
-        <option value="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/routes/web.php" />
@@ -160,6 +127,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
         <option value="$PROJECT_DIR$/app/Thread.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/SpamTest.php" />
+        <option value="$PROJECT_DIR$/app/Spam.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" />
       </list>
     </option>
   </component>
@@ -280,42 +251,6 @@
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Notifications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="threads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -345,7 +280,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Less" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -366,13 +301,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies">
-    <configuration name="NotificationTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_reply_that_is_not_by_the_current_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\NotificationTest" file="$PROJECT_DIR$/tests/Feature/NotificationTest.php" method="a_notification_is_prepared_when_a_subscribed_thread_receives_a_reply_that_is_not_by_the_current_user" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.SpamTest.it_validates_spam">
+    <configuration name="ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInForumTest" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="an_authenticated_user_may_participate_in_forum_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="SubscribeToThreadTest.a_user_can_subscribe_to_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\SubscribeToThreadTest" file="$PROJECT_DIR$/tests/Feature/SubscribeToThreadTest.php" method="a_user_can_subscribe_to_threads" scope="Method" />
+    <configuration name="ParticipateInForumTest.replies_that_contain_spam_may_not_be_created" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ParticipateInForumTest" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="replies_that_contain_spam_may_not_be_created" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SpamTest.it_validates_spam" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\SpamTest" file="$PROJECT_DIR$/tests/Unit/SpamTest.php" method="it_validates_spam" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -387,17 +326,13 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/tests" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.SpamTest.it_validates_spam" />
+        <item itemvalue="PHPUnit.ParticipateInForumTest.replies_that_contain_spam_may_not_be_created" />
+        <item itemvalue="PHPUnit.ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" />
         <item itemvalue="PHPUnit.ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" />
-        <item itemvalue="PHPUnit.SubscribeToThreadTest.a_user_can_subscribe_to_threads" />
-        <item itemvalue="PHPUnit.NotificationTest.a_notification_is_prepared_when_a_subscribed_thread_receives_a_reply_that_is_not_by_the_current_user" />
-        <item itemvalue="PHPUnit.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -433,44 +368,45 @@
       <workItem from="1557543532628" duration="698000" />
       <workItem from="1557571544494" duration="10005000" />
       <workItem from="1557650615786" duration="5057000" />
-      <workItem from="1557747143146" duration="14003000" />
+      <workItem from="1557747143146" duration="15708000" />
+      <workItem from="1557834750299" duration="1866000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ThreadTest_a_thread_notifies_all_registered_subscribers_when_a_reply_is_added - 2019.05.13 at 12h 07m 29s.xml">
-      <configuration name="ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 09m 44s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_notifies_all_registered_subscribers_when_a_reply_is_added - 2019.05.13 at 12h 09m 47s.xml">
-      <configuration name="ThreadTest.a_thread_notifies_all_registered_subscribers_when_a_reply_is_added" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 10m 00s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 16m 41s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 10m 09s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 16m 52s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 10m 24s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 17m 03s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 10m 36s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 21m 00s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 10m 59s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 23m 12s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 15m 39s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 26m 37s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 16m 00s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 28m 04s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 16m 08s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies - 2019.05.13 at 17h 29m 46s.xml">
-      <configuration name="ThreadTest.a_thread_can_check_if_the_auhtneticated_user_has_read_all_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SpamTest_it_validates_spam - 2019.05.14 at 12h 16m 42s.xml">
+      <configuration name="SpamTest.it_validates_spam" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238559000" />
+    <option name="totallyTimeSpent" value="242130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -485,13 +421,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.17590618" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.17750533" />
       <window_info x="508" y="378" width="872" height="359" id="Structure" order="1" sideWeight="0.29968783" side_tool="true" type="FLOATING" weight="0.17377399" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28616026" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28616026" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,34 +469,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Notifications/Notifiable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/RouteAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Example.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExampleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/threads/reply.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -713,16 +621,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/ThreadHasNewReply.php" />
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-          <folding>
-            <element signature="e#33#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
@@ -897,6 +795,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Thread.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+          <folding>
+            <element signature="e#23#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -907,20 +822,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Thread.php">
+    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state relative-caret-position="216">
+          <caret line="17140" column="10" selection-start-line="17140" selection-start-column="10" selection-end-line="17140" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Spam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/SpamTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="40" />
           <folding>
-            <element signature="e#23#56#0#PHP" expanded="true" />
+            <element signature="e#31#44#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+        <state relative-caret-position="379">
+          <caret line="161" column="45" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="45" />
+          <folding>
+            <element signature="e#33#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>

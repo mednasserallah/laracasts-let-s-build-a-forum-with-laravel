@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use mysql_xdevapi\Exception;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -149,5 +150,21 @@ class ParticipateInForumTest extends TestCase
             'id' => $reply->id,
             'body' => 'You\'ve been changed, fool!'
         ]);
+    }
+    
+    /** @test */
+    public function replies_that_contain_spam_may_not_be_created()
+    {
+        $this->signIn();
+
+        $reply = factory('App\Reply')->create([
+            'user_id' => auth()->id(),
+            'body' => 'Yahoo Customer Support'
+        ]);
+
+        $this->expectException(\Exception::class);
+
+        $this->withoutExceptionHandling()
+            ->post($this->thread->path() . '/replies', $reply->toArray());
     }
 }
