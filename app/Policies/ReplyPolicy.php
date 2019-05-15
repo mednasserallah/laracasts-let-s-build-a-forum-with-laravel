@@ -18,13 +18,11 @@ class ReplyPolicy
      */
     public function create(User $user)
     {
-        $reply = $user->fresh()->lastReply;
-
-        if ($reply) {
-            return ! $reply->wasJustPublished();
+        if (! $lastReply = $user->fresh()->lastReply) {
+            return true;
         }
 
-        return true;
+        return ! $lastReply->wasJustPublished();
     }
 
     /**

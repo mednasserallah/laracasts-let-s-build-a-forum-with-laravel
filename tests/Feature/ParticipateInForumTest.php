@@ -23,8 +23,8 @@ class ParticipateInForumTest extends TestCase
     {
         $reply = factory('App\Reply')->raw();
 
-        $this->post($this->thread->path() . '/replies', $reply)
-            ->assertRedirect('login');;
+        $this->postJson($this->thread->path() . '/replies', $reply)
+            ->assertStatus(401);
     }
 
     /** @test */
@@ -36,7 +36,8 @@ class ParticipateInForumTest extends TestCase
             'thread_id' => $this->thread->id
         ]);
 
-        $this->post($this->thread->path() . '/replies', $reply->toArray());
+        $this->postJson($this->thread->path() . '/replies', $reply->toArray())
+            ->assertStatus(201);
 
         $this->assertDatabaseHas('replies', [
             'thread_id' => $reply->thread_id,
@@ -55,7 +56,7 @@ class ParticipateInForumTest extends TestCase
             'body' => null
         ]);
 
-        $this->post($this->thread->path() . '/replies', $reply->toArray())
+        $this->postJson($this->thread->path() . '/replies', $reply->toArray())
             ->assertStatus(422);
     }
 
@@ -67,7 +68,7 @@ class ParticipateInForumTest extends TestCase
         $this->expectException('Illuminate\Auth\AuthenticationException');
 
         $this->withoutExceptionHandling()
-            ->delete('/replies/' . $reply->id);
+            ->deleteJson('/replies/' . $reply->id);
     }
 
     /** @test */
@@ -80,7 +81,7 @@ class ParticipateInForumTest extends TestCase
         $this->expectException('Illuminate\Auth\Access\AuthorizationException');
 
         $this->withoutExceptionHandling()
-            ->delete('/replies/' . $reply->id);
+            ->deleteJson('/replies/' . $reply->id);
     }
 
     /** @test */
@@ -93,7 +94,7 @@ class ParticipateInForumTest extends TestCase
         ]);
 
         $this->withoutExceptionHandling()
-            ->delete('/replies/' . $reply->id);
+            ->deleteJson('/replies/' . $reply->id);
 
         $this->assertDatabaseMissing('replies', [
             'id' => $reply->id
@@ -110,7 +111,7 @@ class ParticipateInForumTest extends TestCase
         $this->expectException('Illuminate\Auth\AuthenticationException');
 
         $this->withoutExceptionHandling()
-            ->patch('/replies/' . $reply->id, [
+            ->patchJson('/replies/' . $reply->id, [
                 'body' => 'You\'ve been changed, fool!'
             ]);
     }
@@ -125,7 +126,7 @@ class ParticipateInForumTest extends TestCase
         $this->expectException('Illuminate\Auth\Access\AuthorizationException');
 
         $this->withoutExceptionHandling()
-            ->patch('/replies/' . $reply->id, [
+            ->patchJson('/replies/' . $reply->id, [
                 'body' => 'You\'ve been changed, fool!'
             ]);
     }
@@ -140,7 +141,7 @@ class ParticipateInForumTest extends TestCase
         ]);
 
         $this->withoutExceptionHandling()
-            ->patch('/replies/' . $reply->id, [
+            ->patchJson('/replies/' . $reply->id, [
                 'body' => 'You\'ve been changed, fool!'
             ]);
 
@@ -157,11 +158,11 @@ class ParticipateInForumTest extends TestCase
 
         $reply = factory('App\Reply')->make([
             'user_id' => auth()->id(),
-            'body' => 'Yahoo Customer Support'
+            'body' => 'Yahoo Customer Support',
+            'thread_id' => null
         ]);
 
-        $this->withoutExceptionHandling()
-            ->post($this->thread->path() . '/replies', $reply->toArray())
+        $this->postJson($this->thread->path() . '/replies', $reply->toArray())
             ->assertStatus(422);
     }
     
@@ -174,12 +175,10 @@ class ParticipateInForumTest extends TestCase
             'user_id' => auth()->id()
         ]);
 
-        $this->withoutExceptionHandling()
-            ->post($this->thread->path() . '/replies', $replies[0])
+        $this->postJson($this->thread->path() . '/replies', $replies[0])
             ->assertStatus(201);
 
-        $this->withoutExceptionHandling()
-            ->post($this->thread->path() . '/replies', $replies[1])
+        $this->postJson($this->thread->path() . '/replies', $replies[1])
             ->assertStatus(429);
     }
 }
