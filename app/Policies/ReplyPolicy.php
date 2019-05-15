@@ -10,6 +10,22 @@ class ReplyPolicy
 {
     use HandlesAuthorization;
 
+    /**
+     * Determine whether the user can create threads.
+     *
+     * @param  \App\User  $user
+     * @return mixed
+     */
+    public function create(User $user)
+    {
+        $reply = $user->fresh()->lastReply;
+
+        if ($reply) {
+            return ! $reply->wasJustPublished();
+        }
+
+        return true;
+    }
 
     /**
      * Determine whether the user can update the reply.
