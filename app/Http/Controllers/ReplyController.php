@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreReplyRequest;
+use App\Notifications\YouWereMentioned;
 use App\Reply;
 use App\Rules\SpamFree;
 use App\Thread;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 
 class ReplyController extends Controller
@@ -32,6 +34,16 @@ class ReplyController extends Controller
             'body' => $data['body'],
             'user_id' => \Auth::id()
         ])->load('owner');
+
+        preg_match_all('/\@([^\s\.]+)/', $reply->body, $matches);
+
+        foreach ($matches[1] as $name) {
+            $user = \App\User::where('name', $name)->first();
+
+            if ($user) {
+                $user->notify(new YouWereMentioned($reply));
+            }
+        }
 
         return $reply;
     }

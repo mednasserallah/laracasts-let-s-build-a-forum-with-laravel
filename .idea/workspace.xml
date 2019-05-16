@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/ThrottleException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,82 +14,50 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5798701">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#40#80#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-480">
-                  <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#33#83#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Requests/StoreReplyRequest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-                  <folding>
-                    <element signature="e#37#74#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Policies/ReplyPolicy.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="411">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
-                  <folding>
-                    <element signature="e#34#48#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/MentionUsersTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <element signature="e#34#53#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2742">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+              <folding>
+                <element signature="e#40#80#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Notifications/YouWereMentioned.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fav</find>
       <find>submit</find>
       <find>$</find>
       <find>show</find>
@@ -135,6 +97,7 @@
       <find>ad</find>
       <find>Laravel</find>
       <find>contain</find>
+      <find>repl</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Web Projects\Homestead\laravel\forum\resources</dir>
@@ -146,8 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Filters/ThreadFilter.php" />
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_05_10_001844_create_thread_subscriptions_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadSubscriptionController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/SubscibeButton.vue" />
@@ -192,11 +153,13 @@
         <option value="$PROJECT_DIR$/app/Reply.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ReplyTest.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/ThrottleException.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" />
         <option value="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/StoreReplyRequest.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" />
+        <option value="$PROJECT_DIR$/app/Notifications/YouWereMentioned.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" />
       </list>
     </option>
   </component>
@@ -350,6 +313,12 @@
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Notifications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -394,21 +363,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.Feature">
+  <component name="RunManager" selected="PHPUnit.MentionUsersTest.mentioned_users_in_a_reply_are_notified">
     <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
     </configuration>
-    <configuration name="ParticipateInForumTest.authorized_users_can_update_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInForumTest" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="authorized_users_can_update_replies" scope="Method" />
+    <configuration name="MentionUsersTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MentionUsersTest" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MentionUsersTest" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" method="mentioned_users_in_a_reply_are_notified" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ParticipateInForumTest.replies_that_contain_spam_may_not_be_created" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ParticipateInForumTest" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="replies_that_contain_spam_may_not_be_created" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ParticipateInForumTest.unauthorized_users_cannot_update_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ParticipateInForumTest" file="$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php" method="unauthorized_users_cannot_update_replies" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ParticipateInForumTest.users_may_only_reply_a_maximum_of_once_per_minute" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -421,11 +390,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MentionUsersTest.mentioned_users_in_a_reply_are_notified" />
+        <item itemvalue="PHPUnit.MentionUsersTest" />
         <item itemvalue="PHPUnit.Feature" />
         <item itemvalue="PHPUnit.ParticipateInForumTest.users_may_only_reply_a_maximum_of_once_per_minute" />
         <item itemvalue="PHPUnit.ParticipateInForumTest.replies_that_contain_spam_may_not_be_created" />
-        <item itemvalue="PHPUnit.ParticipateInForumTest.authorized_users_can_update_replies" />
-        <item itemvalue="PHPUnit.ParticipateInForumTest.unauthorized_users_cannot_update_replies" />
       </list>
     </recent_temporary>
   </component>
@@ -464,44 +433,44 @@
       <workItem from="1557747143146" duration="15708000" />
       <workItem from="1557834750299" duration="11148000" />
       <workItem from="1557872731219" duration="8540000" />
-      <workItem from="1557952598487" duration="4377000" />
+      <workItem from="1557952598487" duration="8399000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ParticipateInForumTest_users_may_only_reply_a_maximum_of_once_per_minute - 2019.05.15 at 21h 52m 32s.xml">
-      <configuration name="ParticipateInForumTest.users_may_only_reply_a_maximum_of_once_per_minute" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 46m 14s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_users_may_only_reply_a_maximum_of_once_per_minute - 2019.05.15 at 21h 52m 38s.xml">
-      <configuration name="ParticipateInForumTest.users_may_only_reply_a_maximum_of_once_per_minute" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 49m 51s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature - 2019.05.15 at 21h 52m 45s.xml">
-      <configuration name="Feature" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 50m 45s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_unauthenticated_user_may_not_participate_in_forum_threads - 2019.05.15 at 21h 55m 37s.xml">
-      <configuration name="ParticipateInForumTest.unauthenticated_user_may_not_participate_in_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 50m 58s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_unauthenticated_user_may_not_participate_in_forum_threads - 2019.05.15 at 21h 56m 17s.xml">
-      <configuration name="ParticipateInForumTest.unauthenticated_user_may_not_participate_in_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 53m 22s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_unauthenticated_user_may_not_participate_in_forum_threads - 2019.05.15 at 21h 56m 23s.xml">
-      <configuration name="ParticipateInForumTest.unauthenticated_user_may_not_participate_in_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 53m 32s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_an_authenticated_user_may_participate_in_forum_threads - 2019.05.15 at 21h 56m 45s.xml">
-      <configuration name="ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 22h 54m 35s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_an_authenticated_user_may_participate_in_forum_threads - 2019.05.15 at 21h 57m 22s.xml">
-      <configuration name="ParticipateInForumTest.an_authenticated_user_may_participate_in_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 23h 02m 23s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_a_reply_requires_a_body - 2019.05.15 at 21h 57m 36s.xml">
-      <configuration name="ParticipateInForumTest.a_reply_requires_a_body" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.15 at 23h 02m 42s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ParticipateInForumTest_guests_cannot_delete_replies - 2019.05.15 at 21h 57m 40s.xml">
-      <configuration name="ParticipateInForumTest.guests_cannot_delete_replies" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="MentionUsersTest_mentioned_users_in_a_reply_are_notified - 2019.05.16 at 01h 58m 10s.xml">
+      <configuration name="MentionUsersTest.mentioned_users_in_a_reply_are_notified" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264329000" />
+    <option name="totallyTimeSpent" value="268351000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,13 +485,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.17910448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.17910448" />
       <window_info x="508" y="378" width="872" height="359" id="Structure" order="1" sideWeight="0.29968783" side_tool="true" type="FLOATING" weight="0.17377399" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3506764" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3506764" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -564,30 +533,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/ThreadSubscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="9" selection-start-line="9" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Contracts/Cache/Repository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -719,26 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="101" lean-forward="true" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Thread.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="95" column="93" selection-start-line="95" selection-start-column="93" selection-end-line="95" selection-end-column="93" />
-          <folding>
-            <element signature="e#23#56#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,27 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#40#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_ide_helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="5747" column="31" selection-start-line="5747" selection-start-column="31" selection-end-line="5747" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -916,26 +824,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StoreReplyRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="e#37#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Policies/ReplyPolicy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
+        <state relative-caret-position="525">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#34#48#0#PHP" expanded="true" />
@@ -952,10 +843,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state relative-caret-position="316">
+          <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="e#33#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Policies/ReplyPolicy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/StoreReplyRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <element signature="e#37#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Thread.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <element signature="e#23#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2742">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/MentionUsersTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#34#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/ThreadWasUpdated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="34" selection-start-column="16" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/YouWereMentioned.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#80#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
