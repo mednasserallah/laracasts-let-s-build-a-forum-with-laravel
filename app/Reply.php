@@ -55,4 +55,11 @@ class Reply extends Model
         return Carbon::now()->diffInSeconds($this->created_at) <= $seconds;
     }
 
+    public function mentionedUsers()
+    {
+        preg_match_all('/\@([^\s\.]+)/', $this->body, $matches);
+
+        return $matches[1];
+    }
+
 }

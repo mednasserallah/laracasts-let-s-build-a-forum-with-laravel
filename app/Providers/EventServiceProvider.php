@@ -19,6 +19,7 @@ class EventServiceProvider extends ServiceProvider
         ],
 
         \App\Events\ThreadHasNewReply::class => [
+            \App\Listeners\NotifyMentionedUsers::class,
             \App\Listeners\NotifyThreadSubscribers::class
         ]
     ];

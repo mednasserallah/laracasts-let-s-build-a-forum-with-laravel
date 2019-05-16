@@ -7,8 +7,8 @@ use App\Notifications\YouWereMentioned;
 use App\Reply;
 use App\Rules\SpamFree;
 use App\Thread;
-use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class ReplyController extends Controller
 {
@@ -23,7 +23,7 @@ class ReplyController extends Controller
      *
      * @param $channelId
      * @param Thread $thread
-     * @param  \Illuminate\Http\Request $request
+     * @param StoreReplyRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store($channelId, Thread $thread, StoreReplyRequest $request)
@@ -34,16 +34,6 @@ class ReplyController extends Controller
             'body' => $data['body'],
             'user_id' => \Auth::id()
         ])->load('owner');
-
-        preg_match_all('/\@([^\s\.]+)/', $reply->body, $matches);
-
-        foreach ($matches[1] as $name) {
-            $user = \App\User::where('name', $name)->first();
-
-            if ($user) {
-                $user->notify(new YouWereMentioned($reply));
-            }
-        }
 
         return $reply;
     }
