@@ -30,6 +30,13 @@ class Reply extends Model
 
     protected $touches = ['thread'];
 
+    public function setBodyAttribute($value)
+    {
+        $pattern = '/@([\w\-]+)/';
+
+        $this->attributes['body'] = preg_replace($pattern, '<a href="/profiles/$1">$0</a>', $value);
+    }
+
     public function owner()
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -57,7 +64,9 @@ class Reply extends Model
 
     public function mentionedUserNames()
     {
-        preg_match_all('/\@([^\s\.]+)/', $this->body, $matches);
+        $pattern = '/@([\w\-]+)/';
+
+        preg_match_all($pattern, $this->body, $matches);
 
         return $matches[1];
     }

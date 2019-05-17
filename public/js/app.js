@@ -56419,7 +56419,7 @@ var render = function() {
           : _c("div", [
               _c("p", {
                 staticClass: "card-text",
-                domProps: { textContent: _vm._s(_vm.reply.body) }
+                domProps: { innerHTML: _vm._s(_vm.reply.body) }
               })
             ])
       ]),

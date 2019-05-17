@@ -40,7 +40,7 @@
                 </div>
 
                 <div v-else>
-                    <p class="card-text" v-text="reply.body"></p>
+                    <p class="card-text" v-html="reply.body"></p>
                 </div>
 
             </div>
