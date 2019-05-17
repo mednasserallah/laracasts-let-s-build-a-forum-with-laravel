@@ -22,17 +22,21 @@
             </div>
             <div class="card-body">
 
-                <div v-if="editing">
-                    <div class="form-group">
-                        <textarea class="form-control"
-                                  name="body"
-                                  v-model="reply.body"
-                                  @keydown.shift.enter="updateReply"
-                        ></textarea>
-                    </div>
 
-                    <button class="btn btn-sm btn-link" @click="cancelEdit">Cancel</button>
-                    <button class="btn btn-sm btn-primary" @click="updateReply">Update</button>
+                <div v-if="editing">
+                    <form action="" @submit.prevent="updateReply">
+                        <div class="form-group">
+                            <textarea class="form-control"
+                                      name="body"
+                                      v-model="reply.body"
+                                      @keydown.shift.enter="updateReply"
+                                      required
+                            ></textarea>
+                        </div>
+
+                        <button class="btn btn-sm btn-link" @click="cancelEdit" type="button">Cancel</button>
+                        <button class="btn btn-sm btn-primary" type="submit">Update</button>
+                    </form>
                 </div>
 
                 <div v-else>

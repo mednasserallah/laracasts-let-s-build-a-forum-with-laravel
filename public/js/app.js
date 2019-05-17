@@ -2161,6 +2161,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -56337,58 +56341,79 @@ var render = function() {
       _c("div", { staticClass: "card-body" }, [
         _vm.editing
           ? _c("div", [
-              _c("div", { staticClass: "form-group" }, [
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.reply.body,
-                      expression: "reply.body"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { name: "body" },
-                  domProps: { value: _vm.reply.body },
+              _c(
+                "form",
+                {
+                  attrs: { action: "" },
                   on: {
-                    keydown: function($event) {
-                      if (
-                        !$event.type.indexOf("key") &&
-                        _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                      ) {
-                        return null
-                      }
-                      if (!$event.shiftKey) {
-                        return null
-                      }
+                    submit: function($event) {
+                      $event.preventDefault()
                       return _vm.updateReply($event)
-                    },
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.reply, "body", $event.target.value)
                     }
                   }
-                })
-              ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-sm btn-link",
-                  on: { click: _vm.cancelEdit }
                 },
-                [_vm._v("Cancel")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-sm btn-primary",
-                  on: { click: _vm.updateReply }
-                },
-                [_vm._v("Update")]
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.reply.body,
+                          expression: "reply.body"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { name: "body", required: "" },
+                      domProps: { value: _vm.reply.body },
+                      on: {
+                        keydown: function($event) {
+                          if (
+                            !$event.type.indexOf("key") &&
+                            _vm._k(
+                              $event.keyCode,
+                              "enter",
+                              13,
+                              $event.key,
+                              "Enter"
+                            )
+                          ) {
+                            return null
+                          }
+                          if (!$event.shiftKey) {
+                            return null
+                          }
+                          return _vm.updateReply($event)
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.reply, "body", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-sm btn-link",
+                      attrs: { type: "button" },
+                      on: { click: _vm.cancelEdit }
+                    },
+                    [_vm._v("Cancel")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-sm btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Update")]
+                  )
+                ]
               )
             ])
           : _c("div", [
@@ -69484,8 +69509,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\web projects\homestead\laravel\forum\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! E:\web projects\homestead\laravel\forum\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\Web Projects\Homestead\laravel\forum\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\Web Projects\Homestead\laravel\forum\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

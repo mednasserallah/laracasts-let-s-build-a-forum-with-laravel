@@ -28,7 +28,7 @@ class NotifyMentionedUsers
      */
     public function handle(ThreadHasNewReply $event)
     {
-        $users = \App\User::whereIn('name', $event->reply->mentionedUsers())->get();
+        $users = \App\User::whereIn('name', $event->reply->mentionedUserNames())->get();
         Notification::send($users, new YouWereMentioned($event->reply));
     }
 }
