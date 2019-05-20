@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/threads/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +19,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/threads/index.blade.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/AddAvatarTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="377">
+              <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+              <folding>
+                <element signature="e#34#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="139" column="35" selection-start-line="139" selection-start-column="35" selection-end-line="139" selection-end-column="35" />
+            <state relative-caret-position="320">
+              <caret line="18" column="98" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="98" />
               <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
+                <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -91,10 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ExampleController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserNotificationController.php" />
-        <option value="$PROJECT_DIR$/resources/views/threads/show.blade.php" />
-        <option value="$PROJECT_DIR$/database/factories/NotificationFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/NotificationTest.php" />
         <option value="$PROJECT_DIR$/resources/js/pages/Thread.vue" />
         <option value="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" />
@@ -118,7 +127,6 @@
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/js/components/Flash.vue" />
         <option value="$PROJECT_DIR$/app/Rules/SpamFree.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/ThrottleException.php" />
         <option value="$PROJECT_DIR$/app/Policies/ReplyPolicy.php" />
@@ -134,7 +142,6 @@
         <option value="$PROJECT_DIR$/tests/Unit/ReplyTest.php" />
         <option value="$PROJECT_DIR$/app/Reply.php" />
         <option value="$PROJECT_DIR$/resources/js/components/Reply.vue" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" />
         <option value="$PROJECT_DIR$/resources/js/components/NewReply.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
@@ -142,6 +149,12 @@
         <option value="$PROJECT_DIR$/resources/views/threads/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/index.blade.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" />
       </list>
     </option>
   </component>
@@ -290,20 +303,58 @@
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="threads" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+              <item name="disks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+              <item name="disks" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+              <item name="disks" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="avatars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,25 +393,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.Feature">
+  <component name="RunManager" selected="PHPUnit.AddAvatarTest">
+    <configuration name="AddAvatarTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_user_may_add_an_avatar_to_his_profile" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AddAvatarTest.a_valid_avatar_must_be_provided" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="a_valid_avatar_must_be_provided" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AddAvatarTest.only_members_can_add_avatars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\AddAvatarTest" file="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" method="only_members_can_add_avatars" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/tests/Feature" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MentionUsersTest" file="$PROJECT_DIR$/tests/Feature/MentionUsersTest.php" method="it_can_fetch_all_mentioned_users_starting_with_the_given_characters" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ReadThreadsTest" file="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" method="a_user_can_filter_threads_by_those_that_are_unanswered" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ReplyTest.it_can_detect_all_mentioned_users_in_the_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\ReplyTest" file="$PROJECT_DIR$/tests/Unit/ReplyTest.php" method="it_can_detect_all_mentioned_users_in_the_body" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/tests/Unit" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -369,11 +420,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.AddAvatarTest" />
+        <item itemvalue="PHPUnit.AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" />
+        <item itemvalue="PHPUnit.AddAvatarTest.a_valid_avatar_must_be_provided" />
+        <item itemvalue="PHPUnit.AddAvatarTest.only_members_can_add_avatars" />
         <item itemvalue="PHPUnit.Feature" />
-        <item itemvalue="PHPUnit.ReadThreadsTest.a_user_can_filter_threads_by_those_that_are_unanswered" />
-        <item itemvalue="PHPUnit.Unit" />
-        <item itemvalue="PHPUnit.MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" />
-        <item itemvalue="PHPUnit.ReplyTest.it_can_detect_all_mentioned_users_in_the_body" />
       </list>
     </recent_temporary>
   </component>
@@ -415,44 +466,44 @@
       <workItem from="1557952598487" duration="18316000" />
       <workItem from="1558054892010" duration="9932000" />
       <workItem from="1558266619802" duration="22000" />
-      <workItem from="1558365569009" duration="1128000" />
+      <workItem from="1558365569009" duration="3794000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReplyTest_it_can_detect_all_mentioned_users_in_the_body - 2019.05.17 at 01h 54m 48s.xml">
-      <configuration name="ReplyTest.it_can_detect_all_mentioned_users_in_the_body" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 19m 06s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ReplyTest_it_can_detect_all_mentioned_users_in_the_body - 2019.05.17 at 01h 58m 28s.xml">
-      <configuration name="ReplyTest.it_can_detect_all_mentioned_users_in_the_body" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 19m 40s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 05h 57m 51s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 20m 02s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 05h 59m 03s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 20m 09s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 05h 59m 19s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 20m 30s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 05h 59m 34s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 21m 28s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 06h 00m 34s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 21m 42s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 06h 00m 52s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 22m 08s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 06h 01m 10s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 22m 26s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="MentionUsersTest_it_can_fetch_all_mentioned_users_starting_with_the_given_characters - 2019.05.17 at 06h 01m 23s.xml">
-      <configuration name="MentionUsersTest.it_can_fetch_all_mentioned_users_starting_with_the_given_characters" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="AddAvatarTest_a_user_may_add_an_avatar_to_his_profile - 2019.05.20 at 16h 22m 36s.xml">
+      <configuration name="AddAvatarTest.a_user_may_add_an_avatar_to_his_profile" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289350000" />
+    <option name="totallyTimeSpent" value="292016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,13 +518,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.18443497" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.18443497" />
       <window_info x="508" y="378" width="872" height="359" id="Structure" order="1" sideWeight="0.29968783" side_tool="true" type="FLOATING" weight="0.17377399" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38085327" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42976066" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,48 +567,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Inspections/KeyHeldDown.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Filters/ThreadFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/RecordActivity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/Flash.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Tests/schema/http-status-codes.rng">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -586,16 +595,6 @@
           <caret line="17" column="73" lean-forward="true" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
           <folding>
             <element signature="e#34#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
-          <folding>
-            <element signature="e#23#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,16 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Reply.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -917,6 +906,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/testing/disks/public/avatars/ObHxkE4W2CqPhJP6ZTaetEQFa7SmMogfTvwsWtgA.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="33" column="59" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="59" />
+          <folding>
+            <element signature="e#23#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/AddAvatarTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding>
+            <element signature="e#34#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="18" column="98" selection-start-line="18" selection-start-column="98" selection-end-line="18" selection-end-column="98" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
         </state>
       </provider>
     </entry>
