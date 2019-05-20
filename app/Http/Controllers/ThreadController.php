@@ -137,6 +137,6 @@ class ThreadController extends Controller
             $threads = $channel->threads();
         }
 
-        return $threads->get();
+        return $threads->paginate(8);
     }
 }

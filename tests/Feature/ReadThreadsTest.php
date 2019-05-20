@@ -117,6 +117,6 @@ class ReadThreadsTest extends TestCase
         $threads = $this->withoutExceptionHandling()
                         ->getJson(route('threads.index', ['unanswered' => true]))->json();
 
-        $this->assertCount(2, $threads);
+        $this->assertCount(2, $threads['data']);
     }
 }
