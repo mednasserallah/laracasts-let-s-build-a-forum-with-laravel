@@ -4,14 +4,16 @@
             <!--<form method="POST" action="{{ route('threads.replies.store', [$thread->channel->id, $thread->id]) }}">-->
 
                 <div class="form-group">
-                    <textarea   class="form-control"
-                                name="body"
-                                placeholder="Have something to say?"
-                                rows="3"
-                                v-model="body"
-                                @keypress.shift.enter="addReply"
-                                required>
-                    </textarea>
+                    <at-ta :members="members">
+                        <textarea   class="form-control"
+                                    name="body"
+                                    placeholder="Have something to say?"
+                                    rows="3"
+                                    v-model="body"
+                                    @keypress.shift.enter="addReply"
+                                    required>
+                        </textarea>
+                    </at-ta>
                 </div>
 
                 <button class="btn btn-primary" @click="addReply">Post</button>
@@ -23,12 +25,20 @@
 </template>
 
 <script>
+    import AtTa from 'vue-at/dist/vue-at-textarea';
+
     export default {
+
+        components: {
+            AtTa,
+        },
 
         data() {
             return {
                 body: '',
-                endpoint: location.pathname + '/replies'
+                endpoint: location.pathname + '/replies',
+
+                members: []
             }
         },
 
@@ -54,8 +64,35 @@
                     .catch(error => {
                         flash(error.response.data, 'danger');
                     })
-            }
+            },
+
+            fetchUsernames(chunk = '') {
+                axios
+                    .get(`/api/users?username=${chunk}`)
+                    .then(({data}) => {
+                        return this.members = data;
+                    })
+            },
+
+
+            // fetchFromRemote: _.debounce(function (chunk) {
+            //     if (chunk) {
+            //         axios
+            //             .get(`/api/users?username=${chunk}`)
+            //             .then(({data}) => {
+            //                 this.members = data;
+            //             })
+            //     }
+            // }, 500) // delay 500ms after each keystroke
+
+            // async handleAt (chunk) {
+            //     this.members = await this.fetchFromRemote(chunk)
+            // }
         },
+
+        created() {
+            this.members = this.fetchUsernames();
+        }
 
     }
 </script>

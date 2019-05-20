@@ -7,6 +7,7 @@
                 @forelse ($threads as $thread)
                     <div class="card mb-4">
                         <div class="card-header">
+                            Posted by
                             <a href="{{ route('profile.show', $thread->creator->name) }}">
                                 {{ $thread->creator->name }}
                             </a>

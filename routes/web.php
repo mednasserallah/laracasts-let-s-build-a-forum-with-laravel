@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('api/users', 'Api\UserController@index')->middleware('api');
+
 Route::get('/threads', 'ThreadController@index')->name('threads.index');
 Route::get('/threads/create', 'ThreadController@create')->name('threads.create')->middleware('auth');;
 Route::get('/threads/{channel}', 'ThreadController@index')->name('threads.channel.index');
