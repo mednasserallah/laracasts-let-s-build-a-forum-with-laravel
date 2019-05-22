@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('api/users', 'Api\UserController@index')->middleware('api');
-Route::post('api/users/{user}/avatar', 'Api\UserAvatarController@store')->middleware(['api', 'auth']);
+Route::post('api/users/{user}/avatar', 'Api\UserAvatarController@store')->name('users.avatars')->middleware(['api', 'auth']);
 
 Route::get('/threads', 'ThreadController@index')->name('threads.index');
 Route::get('/threads/create', 'ThreadController@create')->name('threads.create')->middleware('auth');;
