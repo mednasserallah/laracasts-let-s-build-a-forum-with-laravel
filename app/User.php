@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name', 'email', 'password', 'avatar_path'
     ];
 
+    protected $appends = ['avatar'];
+
     public function getRouteKeyName()
     {
         return 'name';
@@ -74,6 +76,11 @@ class User extends Authenticatable
 
     public function avatar()
     {
-        return $this->avatar_path ?? 'avatars/default.png';
+        return $this->avatar_path ? '/storage/' . $this->avatar_path : '/storage/avatars/default.png';
+    }
+
+    public function getAvatarAttribute()
+    {
+        return $this->avatar();
     }
 }

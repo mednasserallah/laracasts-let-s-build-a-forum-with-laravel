@@ -9,7 +9,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
 
-                            <img class="float-left mr-3" src="/storage/{{ $thread->creator->avatar() }}" alt="user avatar" width="50">
+                            <img class="float-left mr-3" src="{{ $thread->creator->avatar() }}" alt="user avatar" width="50">
 
                             <div class="float-left">
                                 {{ $thread->title }}

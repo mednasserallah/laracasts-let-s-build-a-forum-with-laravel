@@ -5,20 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="page-header mb-3">
-                    <h1>{{ $user->name }}</h1>
+                    <avatar-form :user="{{ $user }}"></avatar-form>
                     <small>Member since {{ $user->created_at->diffForHumans() }}</small>
-
-                    @can ('update', $user)
-                        <form method="POST" action="{{ route('users.avatars', $user) }}" enctype="multipart/form-data">
-                            @csrf
-
-                            <input type="file" name="avatar">
-
-                            <button type="submit" class="btn btn-primary">Add Avatar</button>
-                        </form>
-                    @endcan
-
-                    <img src="/storage/{{ $user->avatar_path }}" alt="user avatar" width="50">
                 </div>
 
                 @forelse ($records as $date => $activities)
