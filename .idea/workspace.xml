@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Trending.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,23 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/threads/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-              <folding>
-                <element signature="e#34#53#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="411">
+              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -46,11 +31,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+            <state relative-caret-position="-22">
+              <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding>
+                <element signature="e#34#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Trending.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -107,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/Notifications/ThreadWasUpdated.php" />
         <option value="$PROJECT_DIR$/app/Listeners/NotifyThreadSubscribers.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ThreadTest.php" />
@@ -155,9 +160,10 @@
         <option value="$PROJECT_DIR$/resources/js/components/AvatarForm.vue" />
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" />
+        <option value="$PROJECT_DIR$/app/Trending.php" />
       </list>
     </option>
   </component>
@@ -275,20 +281,12 @@
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="forum" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="threads" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
@@ -418,44 +416,44 @@
       <workItem from="1558732904602" duration="5326000" />
       <workItem from="1558781402187" duration="10000" />
       <workItem from="1558782859478" duration="31000" />
-      <workItem from="1558792352283" duration="3042000" />
+      <workItem from="1558792352283" duration="5561000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Feature - 2019.05.24 at 22h 36m 56s.xml">
-      <configuration name="Feature" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 17m 04s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 36m 40s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 17m 09s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 37m 10s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 19m 03s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 37m 22s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 22m 01s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 37m 38s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 22m 04s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 37m 55s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 23m 36s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 38m 08s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 25m 18s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 38m 21s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 26m 11s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 39m 57s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 14h 26m 15s.xml">
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 40m 05s.xml">
+      <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TrendingThreadsTest_it_increments_a_threads_score_each_time_it_is_read - 2019.05.25 at 15h 40m 16s.xml">
       <configuration name="TrendingThreadsTest.it_increments_a_threads_score_each_time_it_is_read" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304728000" />
+    <option name="totallyTimeSpent" value="307247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +474,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42976066" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42976066" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -519,16 +517,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ParticipateInForumTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="32" />
-          <folding>
-            <element signature="e#33#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Policies/ReplyPolicy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -885,16 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-          <folding>
-            <element signature="e#34#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -902,20 +880,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/threads/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        <state relative-caret-position="-22">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/threads/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
+        <state relative-caret-position="288">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#34#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Trending.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
         </state>
       </provider>
     </entry>

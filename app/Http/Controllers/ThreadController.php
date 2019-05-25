@@ -6,8 +6,8 @@ use App\Channel;
 use App\Filters\ThreadFilter;
 use App\Rules\SpamFree;
 use App\Thread;
+use App\Trending;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redis;
 
 class ThreadController extends Controller
 {
@@ -18,7 +18,7 @@ class ThreadController extends Controller
      * @param ThreadFilter $filters
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function index(Channel $channel, ThreadFilter $filters)
+    public function index(Channel $channel, ThreadFilter $filters, Trending $trending)
     {
         $threads = $this->getThreads($channel, $filters);
 
@@ -26,9 +26,10 @@ class ThreadController extends Controller
             return $threads;
         }
 
-        $trending = array_map('json_decode', Redis::zrevrange('trending_threads', 0, 4));
-
-        return view('threads.index', compact('threads', 'trending'));
+        return view('threads.index', [
+            'threads' => $threads,
+            'trending' => $trending->get()
+        ]);
     }
 
     /**
@@ -76,16 +77,13 @@ class ThreadController extends Controller
      * @return \Illuminate\Http\Response
      * @throws \Exception
      */
-    public function show($channel, Thread $thread)
+    public function show($channel, Thread $thread, Trending $trending)
     {
         if (\Auth::check()) {
             \Auth::user()->seen($thread);
         }
 
-        Redis::zincrby('trending_threads', 1, json_encode([
-            'title' => $thread->title,
-            'path' => $thread->path()
-        ]));
+        $trending->push($thread);
 
         return view('threads/show', compact('thread'));
     }
