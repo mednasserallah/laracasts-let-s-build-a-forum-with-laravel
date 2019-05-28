@@ -31,9 +31,9 @@
             </article>
         </div>
 
-        @if ($thread->visits())
+        @if ($thread->visits()->count())
             <div class="card-footer">
-                {{ $thread->visits() }} views
+                {{ $thread->visits()->count() }} views
             </div>
         @endif
     </div>

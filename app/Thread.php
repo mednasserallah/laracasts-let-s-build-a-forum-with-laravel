@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Thread extends Model
 {
     use RecordActivity;
-    use RecordVisits;
 
     protected static function boot()
     {
@@ -108,6 +107,11 @@ class Thread extends Model
         $key = \Auth::user()->visitedThreadCacheKey($this);
 
         return $this->updated_at > cache($key);
+    }
+
+    public function visits()
+    {
+        return new Visits($this);
     }
 
 }

@@ -83,7 +83,7 @@ class ThreadController extends Controller
             \Auth::user()->seen($thread);
         }
 
-        $thread->recordVisits();
+        $thread->visits()->record();
 
         $trending->push($thread);
 

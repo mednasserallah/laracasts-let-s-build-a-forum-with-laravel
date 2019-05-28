@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/RecordVisits.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Visits.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/RecordVisits.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/threads/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
     </list>
@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+              <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -45,41 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/threads/list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Unit/ThreadTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
-              <folding>
-                <element signature="e#30#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Thread.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding>
-                <element signature="e#23#56#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/RecordVisits.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="475">
+              <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -139,8 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Notifications/ThreadWasUpdated.php" />
-        <option value="$PROJECT_DIR$/app/Listeners/NotifyThreadSubscribers.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Spam.php" />
         <option value="$PROJECT_DIR$/app/Inspections/InvalidKeyWords.php" />
@@ -186,10 +151,12 @@
         <option value="$PROJECT_DIR$/tests/Feature/TrendingThreadsTest.php" />
         <option value="$PROJECT_DIR$/app/Trending.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Visits.php" />
+        <option value="$PROJECT_DIR$/app/RecordVisits.php" />
         <option value="$PROJECT_DIR$/app/Thread.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/ThreadTest.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/ThreadTest.php" />
       </list>
     </option>
   </component>
@@ -443,44 +410,44 @@
       <workItem from="1558781402187" duration="10000" />
       <workItem from="1558782859478" duration="31000" />
       <workItem from="1558792352283" duration="6165000" />
-      <workItem from="1559067719219" duration="1413000" />
+      <workItem from="1559067719219" duration="2527000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 28m 50s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 06m 01s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 29m 52s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 06m 12s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 31m 49s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 06m 21s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 32m 58s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 06m 42s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 33m 01s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 07m 07s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 34m 31s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 07m 26s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 34m 39s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 08m 26s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 34m 46s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 09m 16s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 36m 29s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 09m 23s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 18h 40m 24s.xml">
+    <history-entry file="ThreadTest_a_thread_records_each_visit - 2019.05.28 at 19h 09m 52s.xml">
       <configuration name="ThreadTest.a_thread_records_each_visit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309264000" />
+    <option name="totallyTimeSpent" value="310378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,13 +511,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Notifications/YouWereMentioned.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2742">
@@ -899,44 +859,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/RecordVisits.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/threads/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="320">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Thread.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="288">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <element signature="e#23#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
+    <entry file="file://$PROJECT_DIR$/app/Visits.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1344">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/ThreadTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+        <state relative-caret-position="405">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
           <folding>
             <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/threads/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
