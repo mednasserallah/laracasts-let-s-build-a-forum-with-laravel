@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-md-4">
-                @if($trending)
+                @if ($trending)
                     <div class="card mb-4">
                         <div class="card-header">
                             Trending Threads
@@ -28,6 +28,7 @@
                                 @endforeach
                             </ul>
                         </div>
+
                     </div>
                 @endif
             </div>

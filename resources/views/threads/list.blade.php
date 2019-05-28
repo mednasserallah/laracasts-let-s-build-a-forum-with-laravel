@@ -27,8 +27,15 @@
                 </h4>
 
                 <div class="card-text">{{ $thread->body }}</div>
+
             </article>
         </div>
+
+        @if ($thread->visits())
+            <div class="card-footer">
+                {{ $thread->visits() }} views
+            </div>
+        @endif
     </div>
 @empty
     <div class="alert alert-light" role="alert">
