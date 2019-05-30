@@ -25,7 +25,7 @@ Route::get('/threads/{channel}', 'ThreadController@index')->name('threads.channe
 Route::get('/threads/{channel}/{thread}', 'ThreadController@show')->name('threads.show');
 Route::delete('/threads/{channel}/{thread}', 'ThreadController@destroy')->name('threads.destroy')->middleware('auth');
 
-Route::post('/threads', 'ThreadController@store')->name('threads.store')->middleware('auth');
+Route::post('/threads', 'ThreadController@store')->name('threads.store')->middleware(['auth', 'verified']);
 
 Route::get('/threads/{channel}/{thread}/replies', 'ReplyController@index')->name('threads.replies.index');
 Route::post('/threads/{channel}/{thread}/replies', 'ReplyController@store')->name('threads.replies.store')->middleware('auth');
@@ -43,6 +43,6 @@ Route::get('/profiles/{user}', 'ProfileController@show')->name('profile.show');
 Route::get('/profiles/{user}/notifications', 'UserNotificationController@index')->name('profile.notifications')->middleware('auth');
 Route::delete('/profiles/{user}/notifications/{notification}', 'UserNotificationController@destroy')->name('profile.notifications.destroy')->middleware('auth');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -25,6 +25,15 @@ class ManageThreadsTest extends TestCase
         $this->post('/threads', $thread->toArray())
             ->assertRedirect('/login');
     }
+    
+    /** @test */
+    public function authenticated_users_must_first_confirm_email_address_before_creating_threads()
+    {
+        $user = factory('App\User')->create(['email_verified_at' => null]);
+
+        $this->publishThread(['body' => null], $user)
+            ->assertRedirect('/email/verify');
+    }
 
     /** @test */
     public function an_authenticated_user_can_create_new_forum_threads()
@@ -122,9 +131,9 @@ class ManageThreadsTest extends TestCase
             ->assertSessionHasErrors('channel_id');
     }
 
-    public function publishThread($overrides = [])
+    public function publishThread($overrides = [], $user = null)
     {
-        $this->signIn();
+        $user ? $this->signIn($user) : $this->signIn();
 
         $thread = factory('App\Thread')->make($overrides);
 
