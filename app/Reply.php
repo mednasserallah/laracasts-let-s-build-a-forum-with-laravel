@@ -71,4 +71,9 @@ class Reply extends Model
         return $matches[1];
     }
 
+    public function isBest()
+    {
+        return $this->id == $this->thread->best_reply_id;
+    }
+
 }

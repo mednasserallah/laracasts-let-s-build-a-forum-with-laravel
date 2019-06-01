@@ -23,7 +23,7 @@ class Thread extends Model
         });
     }
 
-    protected $fillable = ['title', 'body', 'user_id', 'channel_id', 'slug'];
+    protected $fillable = ['title', 'body', 'user_id', 'channel_id', 'slug', 'best_reply_id'];
 
     protected $with = ['creator', 'channel'];
 
@@ -146,4 +146,10 @@ class Thread extends Model
         return new Visits($this);
     }
 
+    public function markBestReply(Reply $reply)
+    {
+        $reply->thread->update([
+            'best_reply_id' => $reply->id
+        ]);
+    }
 }

@@ -38,6 +38,7 @@ Route::delete('/replies/{reply}/favorites', 'FavoriteController@destroy')->name(
 Route::delete('/replies/{reply}', 'ReplyController@destroy')->name('replies.destroy')->middleware('auth');
 Route::patch('/replies/{reply}', 'ReplyController@update')->name('replies.update')->middleware('auth');
 
+Route::post('/replies/{reply}/best', 'BestReplyController@store')->name('best-replies.store');
 
 Route::get('/profiles/{user}', 'ProfileController@show')->name('profile.show');
 Route::get('/profiles/{user}/notifications', 'UserNotificationController@index')->name('profile.notifications')->middleware('auth');
