@@ -8,6 +8,8 @@ use App\Rules\SpamFree;
 use App\Thread;
 use App\Trending;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class ThreadController extends Controller
 {
@@ -59,9 +61,10 @@ class ThreadController extends Controller
 
         $thread = Thread::create([
             'title' => $data['title'],
+            'slug' => Str::slug($data['title']),
             'body' => $data['body'],
             'channel_id' => $data['channel_id'],
-            'user_id' => \Auth::id()
+            'user_id' => Auth::id()
         ]);
 
         $request->session()->put('key', 'value');

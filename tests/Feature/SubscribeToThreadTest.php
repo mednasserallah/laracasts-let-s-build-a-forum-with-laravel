@@ -18,7 +18,7 @@ class SubscribeToThreadTest extends TestCase
         $thread = factory('App\Thread')->create();
 
         $this->withoutExceptionHandling()
-            ->post(route('threads.subscriptions.store', [$thread->channel->slug, $thread->id]));
+            ->post(route('threads.subscriptions.store', [$thread->channel->slug, $thread->slug]));
 
         $this->assertCount(1, $thread->subscriptions);
     }
@@ -33,7 +33,9 @@ class SubscribeToThreadTest extends TestCase
         $thread->subscribe();
 
         $this->withoutExceptionHandling()
-            ->delete(route('threads.subscriptions.destroy', [$thread->channel->slug, $thread->id]));
+            ->delete(
+                route('threads.subscriptions.destroy', [$thread->channel->slug, $thread->slug])
+            );
 
         $this->assertDatabaseMissing('thread_subscriptions', [
             'thread_id' => $thread->id,
