@@ -39,6 +39,7 @@ class Thread extends Model
         if (static::whereSlug($slug = Str::slug($value))->exists()) {
             $slug = $this->incrementSlug($slug);
         }
+
         $this->attributes['slug'] = $slug;
     }
 
@@ -48,15 +49,15 @@ class Thread extends Model
      * @param  string $slug
      * @return string
      */
-    protected function incrementSlug($slug)
+    protected function incrementSlug($slug, $count = 2)
     {
-        $max = static::whereTitle($this->title)->latest('id')->value('slug');
-        if (is_numeric($max[-1])) {
-            return preg_replace_callback('/(\d+)$/', function ($matches) {
-                return $matches[1] + 1;
-            }, $max);
+        $original = $slug;
+
+        while (Static::whereSlug($slug)->exists()) {
+            $slug = $original . '-' . $count;
         }
-        return "{$slug}-2";
+
+        return $slug;
     }
 
     public function path()

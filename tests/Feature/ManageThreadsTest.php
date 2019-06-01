@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use App\Thread;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ManageThreadsTest extends TestCase
@@ -52,6 +51,21 @@ class ManageThreadsTest extends TestCase
 
         $this->assertTrue(Thread::whereSlug('thread-title-2')->exists());
 
+    }
+    
+    /** @test */
+    public function a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug()
+    {
+        $this->signIn();
+
+        $thread = factory('App\Thread')->create([
+            'title' => 'Thread Title 2019',
+            'slug' => 'thread-title-2019'
+        ]);
+
+        $this->post(route('threads.store'), $thread->toArray());
+
+        $this->assertTrue(Thread::whereSlug('thread-title-2019-2')->exists());
     }
 
     /** @test */
