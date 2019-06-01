@@ -61,7 +61,7 @@ class ThreadController extends Controller
 
         $thread = Thread::create([
             'title' => $data['title'],
-            'slug' => Str::slug($data['title']),
+            'slug' => $data['title'],
             'body' => $data['body'],
             'channel_id' => $data['channel_id'],
             'user_id' => Auth::id()

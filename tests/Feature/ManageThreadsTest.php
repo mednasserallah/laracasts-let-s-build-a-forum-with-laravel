@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Thread;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -34,6 +35,24 @@ class ManageThreadsTest extends TestCase
         $this->publishThread(['body' => null], $user)
             ->assertRedirect('/email/verify');
     }
+    
+    /** @test */
+    public function a_thread_requires_a_unique_slug()
+    {
+        $this->signIn();
+
+        $thread = factory('App\Thread')->create([
+            'title' => 'Thread Title',
+            'slug' => 'thread-title'
+        ]);
+
+        $this->assertEquals('thread-title', $thread->slug);
+
+        $this->post(route('threads.store'), $thread->toArray());
+
+        $this->assertTrue(Thread::whereSlug('thread-title-2')->exists());
+
+    }
 
     /** @test */
     public function an_authenticated_user_can_create_new_forum_threads()
@@ -43,8 +62,6 @@ class ManageThreadsTest extends TestCase
         $thread = factory('App\Thread')->make();
 
         $response = $this->post('/threads', $thread->toArray());
-
-//        dd($response->headers->get('Location'));
 
         $this->get($response->headers->get('Location'))
             ->assertSee($thread->title)
