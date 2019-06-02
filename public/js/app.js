@@ -2305,7 +2305,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       editing: false,
       reply: this.data,
-      isBest: false
+      isBest: this.data.isBest
     };
   },
   computed: {
@@ -2344,16 +2344,21 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     markBestReply: function markBestReply() {
-      this.isBest = true; //
-      // axios
-      //     .post('/replies/' + this.data.id + '/best')
-      //     .then(() => {
-      //         this.isBest = true;
-      //         this.$emit('reply-marked-best');
-      //
-      //         // flash('Your reply has been deleted');
-      //     })
+      var _this3 = this;
+
+      axios.post('/replies/' + this.data.id + '/best').then(function () {
+        window.events.$emit('best-reply-selected', _this3.data.id);
+        flash('Best reply has set successfully.');
+      });
     }
+  },
+  created: function created() {
+    var _this4 = this;
+
+    window.events.$on('best-reply-selected', function (id) {
+      console.log('called');
+      _this4.isBest = id === _this4.data.id;
+    });
   }
 });
 

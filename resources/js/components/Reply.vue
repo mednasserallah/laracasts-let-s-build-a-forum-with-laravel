@@ -82,7 +82,7 @@
             return {
                 editing: false,
                 reply: this.data,
-                isBest: false
+                isBest: this.data.isBest
             }
         },
 
@@ -129,19 +129,23 @@
             },
 
             markBestReply() {
-                this.isBest = true;
-                //
-                // axios
-                //     .post('/replies/' + this.data.id + '/best')
-                //     .then(() => {
-                //         this.isBest = true;
-                //         this.$emit('reply-marked-best');
-                //
-                //         // flash('Your reply has been deleted');
-                //     })
+                axios
+                    .post('/replies/' + this.data.id + '/best')
+                    .then(() => {
+                        window.events.$emit('best-reply-selected', this.data.id);
+
+                        flash('Best reply has set successfully.');
+                    })
             }
 
         },
+
+        created() {
+            window.events.$on('best-reply-selected', id => {
+                console.log('called');
+                this.isBest = (id === this.data.id);
+            });
+        }
     }
 </script>
 

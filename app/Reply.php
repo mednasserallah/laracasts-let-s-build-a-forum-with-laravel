@@ -26,7 +26,7 @@ class Reply extends Model
 
     protected $with = ['owner', 'favorites'];
 
-    protected $appends = ['favorites_count', 'is_favorited'];
+    protected $appends = ['favorites_count', 'is_favorited', 'isBest'];
 
     protected $touches = ['thread'];
 
@@ -74,6 +74,11 @@ class Reply extends Model
     public function isBest()
     {
         return $this->id == $this->thread->best_reply_id;
+    }
+
+    public function getIsBestAttribute()
+    {
+        return $this->isBest();
     }
 
 }
