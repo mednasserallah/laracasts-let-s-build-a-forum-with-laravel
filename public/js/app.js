@@ -2309,18 +2309,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
-    auth: function auth() {
-      return window.App.signedIn;
-    },
     user: function user() {
       return window.App.user;
-    },
-    canUpdate: function canUpdate() {
-      var _this = this;
-
-      return this.authorize(function (user) {
-        return user.id === _this.reply.user_id;
-      });
     },
     ago: function ago() {
       return moment__WEBPACK_IMPORTED_MODULE_0___default()(this.reply.created_at).fromNow();
@@ -2328,13 +2318,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     updateReply: function updateReply() {
-      var _this2 = this;
+      var _this = this;
 
       axios.patch('/replies/' + this.data.id, {
         body: this.reply.body
       }).then(function () {
-        _this2.data.body = _this2.reply.body;
-        _this2.editing = false;
+        _this.data.body = _this.reply.body;
+        _this.editing = false;
         flash('Your data has been updated !');
       })["catch"](function (error) {
         flash(error.response.data, 'danger');
@@ -2345,10 +2335,10 @@ __webpack_require__.r(__webpack_exports__);
       this.editing = false;
     },
     deleteReply: function deleteReply() {
-      var _this3 = this;
+      var _this2 = this;
 
       axios["delete"]('/replies/' + this.data.id).then(function () {
-        _this3.$emit('reply-deleted');
+        _this2.$emit('reply-deleted');
 
         flash('Your reply has been deleted');
       });
@@ -56716,7 +56706,7 @@ var render = function() {
           "div",
           { staticClass: "float-right" },
           [
-            _vm.auth
+            _vm.signedIn
               ? [_c("favorite", { attrs: { reply: _vm.reply } })]
               : [
                   _c("div", [
@@ -56824,7 +56814,7 @@ var render = function() {
         "div",
         { staticClass: "card-footer" },
         [
-          _vm.canUpdate
+          _vm.authorize("updateReply", _vm.reply)
             ? [
                 !_vm.editing
                   ? _c(
@@ -56862,8 +56852,8 @@ var render = function() {
                 {
                   name: "show",
                   rawName: "v-show",
-                  value: !_vm.isBest && !_vm.editing,
-                  expression: "! isBest && ! editing"
+                  value: _vm.signedIn && !_vm.isBest && !_vm.editing,
+                  expression: "signedIn && ! isBest && ! editing"
                 }
               ],
               staticClass: "btn btn-success btn-sm float-right mr-2",
@@ -69151,10 +69141,25 @@ window.flash = function (message) {
   });
 };
 
-window.Vue.prototype.authorize = function (handler) {
-  var user = window.App.user;
-  return user ? handler(user) : false;
+Vue.prototype.authorize = function () {
+  var authorizations = __webpack_require__(/*! ./authorizations */ "./resources/js/authorizations.js");
+
+  if (!window.App.signedIn) {
+    return false;
+  }
+
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
+  }
+
+  if (typeof params[0] === 'string') {
+    return authorizations[params[0]](params[1]);
+  }
+
+  return params[0](window.App.user);
 };
+
+Vue.prototype.signedIn = window.App.signedIn;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -69164,7 +69169,6 @@ window.Vue.prototype.authorize = function (handler) {
  */
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
-
 
 Vue.component('thread-view', __webpack_require__(/*! ./pages/Thread.vue */ "./resources/js/pages/Thread.vue")["default"]);
 Vue.component('flash', __webpack_require__(/*! ./components/Flash.vue */ "./resources/js/components/Flash.vue")["default"]);
@@ -69181,6 +69185,22 @@ Vue.component('avatar-form', __webpack_require__(/*! ./components/AvatarForm.vue
 var app = new Vue({
   el: '#app'
 });
+
+/***/ }),
+
+/***/ "./resources/js/authorizations.js":
+/*!****************************************!*\
+  !*** ./resources/js/authorizations.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var user = window.App.user;
+module.exports = {
+  updateReply: function updateReply(reply) {
+    return reply.user_id === user.id;
+  }
+};
 
 /***/ }),
 

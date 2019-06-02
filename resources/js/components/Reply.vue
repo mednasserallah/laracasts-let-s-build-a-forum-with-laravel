@@ -9,7 +9,7 @@
                 </h5>
 
                 <div class="float-right">
-                    <template v-if="auth">
+                    <template v-if="signedIn">
                         <favorite :reply="reply"></favorite>
                     </template>
                     <template v-else>
@@ -46,7 +46,7 @@
 
             <!--@can ('delete', $reply)-->
                 <div class="card-footer">
-                    <template v-if="canUpdate">
+                    <template v-if="authorize('updateReply', reply)">
                         <button class="btn btn-outline-primary btn-sm float-left mr-2"
                                 @click="editing = true"
                                 v-if="!editing">Edit
@@ -59,7 +59,7 @@
                     </template>
 
                     <button class="btn btn-success btn-sm float-right mr-2"
-                            v-show="! isBest && ! editing"
+                            v-show="signedIn && ! isBest && ! editing"
                             @click="markBestReply">Best Reply
                     </button>
                 </div>
@@ -82,22 +82,13 @@
             return {
                 editing: false,
                 reply: this.data,
-
                 isBest: false
             }
         },
 
         computed: {
-            auth() {
-                return window.App.signedIn;
-            },
-
             user() {
                 return window.App.user;
-            },
-
-            canUpdate() {
-                return this.authorize(user => user.id === this.reply.user_id);
             },
 
             ago() {
