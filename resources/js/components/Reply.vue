@@ -1,5 +1,5 @@
 <template>
-        <div :id="'reply-' + reply.id" class="card border-light mb-3">
+        <div :id="'reply-' + reply.id" class="card mb-3" :class="isBest ? 'border-success' : 'border-light'">
             <div class="card-header level">
                 <h5 class="float-left">
                     <a href="#">
@@ -20,8 +20,7 @@
                     </template>
                 </div>
             </div>
-            <div class="card-body">
-
+            <div class="card-body" :class="isBest ? 'text-success' : ''">
 
                 <div v-if="editing">
                     <form action="" @submit.prevent="updateReply">
@@ -45,21 +44,26 @@
 
             </div>
 
-            <template v-if="canUpdate">
             <!--@can ('delete', $reply)-->
                 <div class="card-footer">
-                    <button class="btn btn-outline-primary btn-sm float-left mr-2"
-                            @click="editing = true"
-                            v-if="!editing">Edit
-                    </button>
+                    <template v-if="canUpdate">
+                        <button class="btn btn-outline-primary btn-sm float-left mr-2"
+                                @click="editing = true"
+                                v-if="!editing">Edit
+                        </button>
 
-                    <button class="btn btn-danger btn-sm float-left mr-2"
-                            @click="deleteReply"
-                            v-if="!editing">Delete
+                        <button class="btn btn-danger btn-sm float-left mr-2"
+                                @click="deleteReply"
+                                v-if="!editing">Delete
+                        </button>
+                    </template>
+
+                    <button class="btn btn-success btn-sm float-right mr-2"
+                            v-show="! isBest && ! editing"
+                            @click="markBestReply">Best Reply
                     </button>
                 </div>
             <!--@endcan-->
-            </template>
         </div>
 </template>
 
@@ -77,7 +81,9 @@
         data() {
             return {
                 editing: false,
-                reply: this.data
+                reply: this.data,
+
+                isBest: false
             }
         },
 
@@ -130,6 +136,19 @@
                         flash('Your reply has been deleted');
                     })
             },
+
+            markBestReply() {
+                this.isBest = true;
+                //
+                // axios
+                //     .post('/replies/' + this.data.id + '/best')
+                //     .then(() => {
+                //         this.isBest = true;
+                //         this.$emit('reply-marked-best');
+                //
+                //         // flash('Your reply has been deleted');
+                //     })
+            }
 
         },
     }

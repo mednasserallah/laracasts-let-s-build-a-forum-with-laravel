@@ -2289,6 +2289,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2300,7 +2304,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       editing: false,
-      reply: this.data
+      reply: this.data,
+      isBest: false
     };
   },
   computed: {
@@ -2347,6 +2352,17 @@ __webpack_require__.r(__webpack_exports__);
 
         flash('Your reply has been deleted');
       });
+    },
+    markBestReply: function markBestReply() {
+      this.isBest = true; //
+      // axios
+      //     .post('/replies/' + this.data.id + '/best')
+      //     .then(() => {
+      //         this.isBest = true;
+      //         this.$emit('reply-marked-best');
+      //
+      //         // flash('Your reply has been deleted');
+      //     })
     }
   }
 });
@@ -56679,7 +56695,8 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "card border-light mb-3",
+      staticClass: "card mb-3",
+      class: _vm.isBest ? "border-success" : "border-light",
       attrs: { id: "reply-" + _vm.reply.id }
     },
     [
@@ -56713,126 +56730,151 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _vm.editing
-          ? _c("div", [
-              _c(
-                "form",
-                {
-                  attrs: { action: "" },
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      return _vm.updateReply($event)
+      _c(
+        "div",
+        { staticClass: "card-body", class: _vm.isBest ? "text-success" : "" },
+        [
+          _vm.editing
+            ? _c("div", [
+                _c(
+                  "form",
+                  {
+                    attrs: { action: "" },
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.updateReply($event)
+                      }
                     }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("textarea", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.reply.body,
-                          expression: "reply.body"
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.reply.body,
+                            expression: "reply.body"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "body", required: "" },
+                        domProps: { value: _vm.reply.body },
+                        on: {
+                          keydown: function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k(
+                                $event.keyCode,
+                                "enter",
+                                13,
+                                $event.key,
+                                "Enter"
+                              )
+                            ) {
+                              return null
+                            }
+                            if (!$event.shiftKey) {
+                              return null
+                            }
+                            return _vm.updateReply($event)
+                          },
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.reply, "body", $event.target.value)
+                          }
                         }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { name: "body", required: "" },
-                      domProps: { value: _vm.reply.body },
-                      on: {
-                        keydown: function($event) {
-                          if (
-                            !$event.type.indexOf("key") &&
-                            _vm._k(
-                              $event.keyCode,
-                              "enter",
-                              13,
-                              $event.key,
-                              "Enter"
-                            )
-                          ) {
-                            return null
-                          }
-                          if (!$event.shiftKey) {
-                            return null
-                          }
-                          return _vm.updateReply($event)
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.reply, "body", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-sm btn-link",
-                      attrs: { type: "button" },
-                      on: { click: _vm.cancelEdit }
-                    },
-                    [_vm._v("Cancel")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-sm btn-primary",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Update")]
-                  )
-                ]
-              )
-            ])
-          : _c("div", [
-              _c("p", {
-                staticClass: "card-text",
-                domProps: { innerHTML: _vm._s(_vm.reply.body) }
-              })
-            ])
-      ]),
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-sm btn-link",
+                        attrs: { type: "button" },
+                        on: { click: _vm.cancelEdit }
+                      },
+                      [_vm._v("Cancel")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-sm btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Update")]
+                    )
+                  ]
+                )
+              ])
+            : _c("div", [
+                _c("p", {
+                  staticClass: "card-text",
+                  domProps: { innerHTML: _vm._s(_vm.reply.body) }
+                })
+              ])
+        ]
+      ),
       _vm._v(" "),
-      _vm.canUpdate
-        ? [
-            _c("div", { staticClass: "card-footer" }, [
-              !_vm.editing
-                ? _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn btn-outline-primary btn-sm float-left mr-2",
-                      on: {
-                        click: function($event) {
-                          _vm.editing = true
+      _c(
+        "div",
+        { staticClass: "card-footer" },
+        [
+          _vm.canUpdate
+            ? [
+                !_vm.editing
+                  ? _c(
+                      "button",
+                      {
+                        staticClass:
+                          "btn btn-outline-primary btn-sm float-left mr-2",
+                        on: {
+                          click: function($event) {
+                            _vm.editing = true
+                          }
                         }
-                      }
-                    },
-                    [_vm._v("Edit\n            ")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              !_vm.editing
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger btn-sm float-left mr-2",
-                      on: { click: _vm.deleteReply }
-                    },
-                    [_vm._v("Delete\n            ")]
-                  )
-                : _vm._e()
-            ])
-          ]
-        : _vm._e()
-    ],
-    2
+                      },
+                      [_vm._v("Edit\n                ")]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.editing
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger btn-sm float-left mr-2",
+                        on: { click: _vm.deleteReply }
+                      },
+                      [_vm._v("Delete\n                ")]
+                    )
+                  : _vm._e()
+              ]
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: !_vm.isBest && !_vm.editing,
+                  expression: "! isBest && ! editing"
+                }
+              ],
+              staticClass: "btn btn-success btn-sm float-right mr-2",
+              on: { click: _vm.markBestReply }
+            },
+            [_vm._v("Best Reply\n            ")]
+          )
+        ],
+        2
+      )
+    ]
   )
 }
 var staticRenderFns = []
