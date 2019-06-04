@@ -159,7 +159,6 @@ class ParticipateInForumTest extends TestCase
         $reply = factory('App\Reply')->make([
             'user_id' => auth()->id(),
             'body' => 'Yahoo Customer Support',
-            'thread_id' => null
         ]);
 
         $this->postJson($this->thread->path() . '/replies', $reply->toArray())
