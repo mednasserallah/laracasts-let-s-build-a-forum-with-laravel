@@ -11,7 +11,37 @@ class LockThreadTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function an_adminstrator_can_lock_any_thread()
+    public function non_administrators_may_not_lock_threads()
+    {
+        $this->signIn();
+
+        $thread = factory('App\Thread')->create([
+            'user_id' => auth()->id()
+        ]);
+
+        $this->post(route('lock-threads.store', $thread))
+            ->assertStatus(403);
+
+        $this->assertFalse($thread->fresh()->is_locked);
+    }
+
+    /** @test */
+    public function administrators_can_lock_threads()
+    {
+        $this->signIn(
+            factory('App\User')->state('administrator')->create()
+        );
+
+        $thread = factory('App\Thread')->create();
+
+        $this->withoutExceptionHandling()
+            ->post(route('lock-threads.store', $thread));
+
+        $this->assertTrue($thread->fresh()->is_locked);
+    }
+
+    /** @test */
+    public function once_locked_a_thread_may_not_receive_new_replies()
     {
         $thread = factory('App\Thread')->create();
         $thread->lock();

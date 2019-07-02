@@ -25,6 +25,10 @@ class Thread extends Model
 
     protected $fillable = ['title', 'body', 'user_id', 'channel_id', 'slug', 'best_reply_id', 'is_locked'];
 
+    protected $casts = [
+        'is_locked' => 'boolean',
+    ];
+
     protected $with = ['creator', 'channel'];
 
     protected $appends = ['isSubscribedTo'];
@@ -152,6 +156,8 @@ class Thread extends Model
             'is_locked' => true
         ]);
     }
+
+
 
     public function visits()
     {

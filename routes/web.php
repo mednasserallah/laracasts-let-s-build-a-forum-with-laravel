@@ -24,8 +24,8 @@ Route::get('/threads/{channel}', 'ThreadController@index')->name('threads.channe
 
 Route::get('/threads/{channel}/{thread}', 'ThreadController@show')->name('threads.show');
 Route::delete('/threads/{channel}/{thread}', 'ThreadController@destroy')->name('threads.destroy')->middleware('auth');
-
 Route::post('/threads', 'ThreadController@store')->name('threads.store')->middleware(['auth', 'verified']);
+Route::post('/lock-threads/{thread}', 'LockThreadController@store')->name('lock-threads.store')->middleware(['auth', 'admin']);;
 
 Route::get('/threads/{channel}/{thread}/replies', 'ReplyController@index')->name('threads.replies.index');
 Route::post('/threads/{channel}/{thread}/replies', 'ReplyController@store')->name('threads.replies.store')->middleware('auth');
@@ -38,7 +38,7 @@ Route::delete('/replies/{reply}/favorites', 'FavoriteController@destroy')->name(
 Route::delete('/replies/{reply}', 'ReplyController@destroy')->name('replies.destroy')->middleware('auth');
 Route::patch('/replies/{reply}', 'ReplyController@update')->name('replies.update')->middleware('auth');
 
-Route::post('/replies/{reply}/best', 'BestReplyController@store')->name('best-replies.store');
+Route::post('/replies/{reply}/best', 'BestReplyController@store')->name('best-replies.store')->middleware('auth');
 
 Route::get('/profiles/{user}', 'ProfileController@show')->name('profile.show');
 Route::get('/profiles/{user}/notifications', 'UserNotificationController@index')->name('profile.notifications')->middleware('auth');
