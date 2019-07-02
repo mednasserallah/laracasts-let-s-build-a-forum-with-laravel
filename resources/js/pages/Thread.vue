@@ -10,14 +10,19 @@
         },
 
         props: {
-            iniRepliesCount: {
+            dataRepliesCount: {
                 type: Number
             },
+
+            dataIsLocked: {
+                type: Boolean
+            }
         },
 
         data() {
             return {
-                repliesCount: this.iniRepliesCount
+                repliesCount: this.dataRepliesCount,
+                isLocked: this.dataIsLocked
             }
         },
     }

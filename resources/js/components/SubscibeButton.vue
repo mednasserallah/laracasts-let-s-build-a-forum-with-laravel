@@ -25,7 +25,7 @@
             },
 
             btnName() {
-                return this.active ? 'Unsubscribe' : 'Subscribe'
+                return this.active ? 'Unsubscribe' : 'Subscribe';
             }
         },
 

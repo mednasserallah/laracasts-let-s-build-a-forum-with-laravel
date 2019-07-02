@@ -7,5 +7,9 @@ module.exports = {
 
     owns(model, ownerProp = 'user_id') {
         return model[ownerProp] === user.id;
+    },
+
+    isAdmin() {
+        return ['Nasmed', 'Sof'].includes(user.name);
     }
 };

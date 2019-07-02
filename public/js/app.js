@@ -2169,6 +2169,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -2494,13 +2497,17 @@ __webpack_require__.r(__webpack_exports__);
     SubscribeButton: _components_SubscibeButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: {
-    iniRepliesCount: {
+    dataRepliesCount: {
       type: Number
+    },
+    dataIsLocked: {
+      type: Boolean
     }
   },
   data: function data() {
     return {
-      repliesCount: this.iniRepliesCount
+      repliesCount: this.dataRepliesCount,
+      isLocked: this.dataIsLocked
     };
   }
 });
@@ -56654,7 +56661,13 @@ var render = function() {
         )
       }),
       _vm._v(" "),
-      _c("new-reply", { on: { "reply-created": _vm.add } }),
+      _vm.$parent.isLocked
+        ? _c("p", { staticClass: "text-center text-danger" }, [
+            _vm._v(
+              "\n        This thread has been locked. No more replies are allowed.\n    "
+            )
+          ])
+        : _c("new-reply", { on: { "reply-created": _vm.add } }),
       _vm._v(" "),
       _c("paginator", {
         attrs: { "data-set": _vm.dataSet },
@@ -69205,6 +69218,9 @@ module.exports = {
   owns: function owns(model) {
     var ownerProp = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'user_id';
     return model[ownerProp] === user.id;
+  },
+  isAdmin: function isAdmin() {
+    return ['Nasmed', 'Sof'].includes(user.name);
   }
 };
 

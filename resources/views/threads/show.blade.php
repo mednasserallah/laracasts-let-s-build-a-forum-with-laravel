@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-    <thread-view inline-template :ini-replies-count.number="{{ $thread->replies->count() }}">
+    <thread-view inline-template :data-replies-count.number="{{ $thread->replies->count() }}" :data-is-locked="{{ $thread->is_locked ? 1 : 0 }}">
         <div class="container">
             <div class="row ">
                 <div class="col col-md-8">
@@ -56,7 +55,11 @@
                                 add currently has <span>@{{ repliesCount }}</span> {{ Str::plural('comment', $thread->replies_count) }}.
                             </div>
 
-                            <subscribe-button :is-subscribed="{{ json_encode($thread->isSubscribedTo) }}"></subscribe-button>
+                            @auth()
+                                <subscribe-button :is-subscribed="{{ json_encode($thread->isSubscribedTo) }}"></subscribe-button>
+                                <button class="btn mt-2 btn-dark" v-if="authorize('isAdmin')" @click="isLocked = true">Lock</button>
+                            @endauth
+
                         </div>
                     </div>
                 </div>
