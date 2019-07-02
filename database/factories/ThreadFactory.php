@@ -13,6 +13,7 @@ $factory->define(Thread::class, function (Faker $faker) {
         'title' => $title,
         'slug' => \Illuminate\Support\Str::slug($title),
         'body' => $faker->paragraph,
+        'is_locked' => false,
         'channel_id' => function() {
             return factory(\App\Channel::class)->create()->id;
         },

@@ -28,6 +28,10 @@ class ReplyController extends Controller
      */
     public function store($channelId, Thread $thread, StoreReplyRequest $request)
     {
+        if ($thread->is_locked) {
+            return response('Thread is locked.', 422);
+        }
+
         $data = $request->validated();
 
         $reply = $thread->addReply([

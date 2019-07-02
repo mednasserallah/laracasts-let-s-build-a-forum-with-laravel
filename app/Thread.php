@@ -23,7 +23,7 @@ class Thread extends Model
         });
     }
 
-    protected $fillable = ['title', 'body', 'user_id', 'channel_id', 'slug', 'best_reply_id'];
+    protected $fillable = ['title', 'body', 'user_id', 'channel_id', 'slug', 'best_reply_id', 'is_locked'];
 
     protected $with = ['creator', 'channel'];
 
@@ -139,6 +139,18 @@ class Thread extends Model
         $key = \Auth::user()->visitedThreadCacheKey($this);
 
         return $this->updated_at > cache($key);
+    }
+
+    /**
+     * Lock a thread from receiving replies.
+     *
+     * @return bool
+     */
+    public function lock()
+    {
+        return $this->update([
+            'is_locked' => true
+        ]);
     }
 
     public function visits()
