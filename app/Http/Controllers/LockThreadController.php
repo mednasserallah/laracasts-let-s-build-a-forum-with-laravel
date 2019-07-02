@@ -8,17 +8,24 @@ use Illuminate\Http\Request;
 class LockThreadController extends Controller
 {
     /**
-     * Lock a thread.
+     * Lock the thread.
      *
      * @param Thread $thread
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function store(Thread $thread)
     {
-//        if (! \Auth::user()->isAdmin()) {
-//            return response('You do not have permission to lock this thread', 403);
-//        }
-
         $thread->lock();
+    }
+
+    /**
+     * Unlock the thread.
+     *
+     * @param Thread $thread
+     * @return void
+     */
+    public function destroy(Thread $thread)
+    {
+        $thread->unlock();
     }
 }

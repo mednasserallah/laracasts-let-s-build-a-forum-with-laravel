@@ -22,3 +22,9 @@ $factory->define(Thread::class, function (Faker $faker) {
         }
     ];
 });
+
+$factory->state(Thread::class, 'locked', function () {
+   return [
+       'is_locked' => true
+   ];
+});

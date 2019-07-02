@@ -132,12 +132,16 @@ class ThreadTest extends TestCase
     }
 
     /** @test */
-    public function a_thread_may_be_locked()
+    public function a_thread_may_be_locked_and_unlocked()
     {
         $this->assertFalse($this->thread->is_locked);
 
         $this->thread->lock();
 
         $this->assertTrue($this->thread->is_locked);
+
+        $this->thread->unlock();
+
+        $this->assertFalse($this->thread->is_locked);
     }
 }

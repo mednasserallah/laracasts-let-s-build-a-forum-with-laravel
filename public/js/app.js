@@ -2497,18 +2497,38 @@ __webpack_require__.r(__webpack_exports__);
     SubscribeButton: _components_SubscibeButton__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   props: {
-    dataRepliesCount: {
-      type: Number
-    },
-    dataIsLocked: {
-      type: Boolean
+    thread: {
+      type: [Object, Array]
     }
   },
   data: function data() {
     return {
-      repliesCount: this.dataRepliesCount,
-      isLocked: this.dataIsLocked
+      repliesCount: this.thread.replies_count,
+      isLocked: this.thread.is_locked
     };
+  },
+  methods: {
+    lock: function lock() {
+      var _this = this;
+
+      axios.post('/lock-threads/' + this.thread.slug).then(function () {
+        _this.isLocked = true;
+      });
+    },
+    unlock: function unlock() {
+      var _this2 = this;
+
+      axios["delete"]('/lock-threads/' + this.thread.slug).then(function () {
+        _this2.isLocked = false;
+      });
+    },
+    toggleLock: function toggleLock() {
+      if (this.isLocked) {
+        this.unlock();
+      } else {
+        this.lock();
+      }
+    }
   }
 });
 

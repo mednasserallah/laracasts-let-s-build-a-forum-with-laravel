@@ -25,7 +25,9 @@ Route::get('/threads/{channel}', 'ThreadController@index')->name('threads.channe
 Route::get('/threads/{channel}/{thread}', 'ThreadController@show')->name('threads.show');
 Route::delete('/threads/{channel}/{thread}', 'ThreadController@destroy')->name('threads.destroy')->middleware('auth');
 Route::post('/threads', 'ThreadController@store')->name('threads.store')->middleware(['auth', 'verified']);
+
 Route::post('/lock-threads/{thread}', 'LockThreadController@store')->name('lock-threads.store')->middleware(['auth', 'admin']);;
+Route::delete('/lock-threads/{thread}', 'LockThreadController@destroy')->name('lock-threads.destroy')->middleware(['auth', 'admin']);;
 
 Route::get('/threads/{channel}/{thread}/replies', 'ReplyController@index')->name('threads.replies.index');
 Route::post('/threads/{channel}/{thread}/replies', 'ReplyController@store')->name('threads.replies.store')->middleware('auth');

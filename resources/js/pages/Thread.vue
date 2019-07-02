@@ -10,20 +10,44 @@
         },
 
         props: {
-            dataRepliesCount: {
-                type: Number
+            thread: {
+                type: [Object, Array]
             },
-
-            dataIsLocked: {
-                type: Boolean
-            }
         },
 
         data() {
             return {
-                repliesCount: this.dataRepliesCount,
-                isLocked: this.dataIsLocked
+                repliesCount: this.thread.replies_count,
+                isLocked: this.thread.is_locked
             }
+        },
+
+        methods: {
+            lock() {
+                axios
+                    .post('/lock-threads/' + this.thread.slug)
+                    .then(() => {
+                        this.isLocked = true;
+                    })
+            },
+
+            unlock() {
+                axios
+                    .delete('/lock-threads/' + this.thread.slug)
+                    .then(() => {
+                        this.isLocked = false;
+                    })
+            },
+
+            toggleLock() {
+                if (this.isLocked) {
+                    this.unlock()
+                } else {
+                    this.lock()
+                }
+            }
+
+
         },
     }
 </script>

@@ -157,7 +157,17 @@ class Thread extends Model
         ]);
     }
 
-
+    /**
+     * Unlock a thread from receiving replies.
+     *
+     * @return bool
+     */
+    public function unlock()
+    {
+        return $this->update([
+            'is_locked' => false
+        ]);
+    }
 
     public function visits()
     {
