@@ -74,7 +74,7 @@ class ManageThreadsTest extends TestCase
             'slug' => 'thread-title-2019'
         ]);
 
-        $this->post(route('threads.store'), $thread->toArray() + ['g-recaptcha-response' => 'token']);
+        $this->post(route('threads.store'), $thread->toArray());
 
         $this->assertTrue(Thread::whereSlug('thread-title-2019-2')->exists());
     }
@@ -86,11 +86,46 @@ class ManageThreadsTest extends TestCase
 
         $thread = factory('App\Thread')->make();
 
-        $response = $this->post('/threads', $thread->toArray() + ['g-recaptcha-response' => 'token']);
+        $response = $this->post('/threads', $thread->toArray());
 
         $this->get($response->headers->get('Location'))
             ->assertSee($thread->title)
             ->assertSee($thread->body);
+    }
+
+    /** @test */
+    public function unauthorized_users_may_not_update_threads()
+    {
+        $this->signIn();
+
+        $thread = factory('App\Thread')->create();
+
+        $this->patchJson($thread->path(), [
+                'title' => 'Updated Title',
+                'body' => 'Updated body.'
+            ])
+            ->assertStatus(403);
+    }
+
+    /** @test */
+    public function an_authenticated_user_can_update_his_thread()
+    {
+        $this->signIn();
+
+        $thread = factory('App\Thread')->create([
+            'user_id' => auth()->id()
+        ]);
+
+        $this->withoutExceptionHandling()
+            ->patchJson($thread->path(), [
+                'title' => 'Updated Title',
+                'body' => 'Updated body.'
+            ]);
+
+        tap($thread->fresh(), function ($thread) {
+            $this->assertEquals('Updated Title', $thread->title);
+            $this->assertEquals('Updated body.', $thread->body);
+        });
     }
     
     /** @test */

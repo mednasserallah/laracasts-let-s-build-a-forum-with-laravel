@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="170" column="53" selection-start-line="170" selection-start-column="53" selection-end-line="170" selection-end-column="53" />
+            <state relative-caret-position="377">
+              <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
               <folding>
                 <element signature="e#33#57#0#PHP" expanded="true" />
               </folding>
@@ -30,33 +30,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/ThreadFactory.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+            <state relative-caret-position="349">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
+                <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Rules/Recaptcha.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="160">
+              <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
               <folding>
-                <element signature="e#29#70#0#PHP" expanded="true" />
+                <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ava</find>
       <find>&quot;threads.{$this-&gt;id}.visits&quot;</find>
       <find>publish</find>
       <find>threads.stor</find>
@@ -103,6 +93,7 @@
       <find>lock</find>
       <find>form</find>
       <find>todo</find>
+      <find>threads.update</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,7 +146,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/Replies.vue" />
         <option value="$PROJECT_DIR$/resources/views/threads/show.blade.php" />
         <option value="$PROJECT_DIR$/tests/Feature/LockThreadTest.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ThreadTest.php" />
         <option value="$PROJECT_DIR$/app/Thread.php" />
@@ -165,9 +155,10 @@
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/create.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/ThreadFactory.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" />
         <option value="$PROJECT_DIR$/app/Rules/Recaptcha.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" />
       </list>
     </option>
   </component>
@@ -357,25 +348,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ManageThreadsTest.a_thread_requires_recaptcha_verification">
+  <component name="RunManager" selected="PHPUnit.ManageThreadsTest.unauthorized_users_may_not_update_threads">
     <configuration name="ManageThreadsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ManageThreadsTest.a_thread_requires_a_unique_slug" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="a_thread_requires_a_unique_slug" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ManageThreadsTest.a_thread_requires_recaptcha_verification" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="a_thread_requires_recaptcha_verification" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ManageThreadsTest.a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="ManageThreadsTest.an_authenticated_user_can_create_new_forum_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="an_authenticated_user_can_create_new_forum_threads" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ManageThreadsTest.an_authenticated_user_can_update_his_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="an_authenticated_user_can_update_his_thread" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageThreadsTest" file="$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php" method="unauthorized_users_may_not_update_threads" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -384,11 +375,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ManageThreadsTest.unauthorized_users_may_not_update_threads" />
+        <item itemvalue="PHPUnit.ManageThreadsTest.an_authenticated_user_can_update_his_thread" />
+        <item itemvalue="PHPUnit.ManageThreadsTest.an_authenticated_user_can_create_new_forum_threads" />
         <item itemvalue="PHPUnit.ManageThreadsTest.a_thread_requires_recaptcha_verification" />
         <item itemvalue="PHPUnit.ManageThreadsTest" />
-        <item itemvalue="PHPUnit.ManageThreadsTest.a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug" />
-        <item itemvalue="PHPUnit.ManageThreadsTest.a_thread_requires_a_unique_slug" />
-        <item itemvalue="PHPUnit.ManageThreadsTest.an_authenticated_user_can_create_new_forum_threads" />
       </list>
     </recent_temporary>
   </component>
@@ -449,44 +440,44 @@
       <workItem from="1561061087629" duration="7044000" />
       <workItem from="1561163140787" duration="138000" />
       <workItem from="1562075146884" duration="14141000" />
-      <workItem from="1562158722843" duration="5724000" />
+      <workItem from="1562158722843" duration="8323000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageThreadsTest - 2019.07.03 at 15h 30m 25s.xml">
-      <configuration name="ManageThreadsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_an_authenticated_user_can_update_his_thread - 2019.07.03 at 16h 51m 52s.xml">
+      <configuration name="ManageThreadsTest.an_authenticated_user_can_update_his_thread" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest - 2019.07.03 at 15h 32m 01s.xml">
-      <configuration name="ManageThreadsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_an_authenticated_user_can_update_his_thread - 2019.07.03 at 16h 57m 14s.xml">
+      <configuration name="ManageThreadsTest.an_authenticated_user_can_update_his_thread" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_a_thread_requires_a_unique_slug - 2019.07.03 at 15h 33m 39s.xml">
-      <configuration name="ManageThreadsTest.a_thread_requires_a_unique_slug" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_an_authenticated_user_can_update_his_thread - 2019.07.03 at 17h 00m 16s.xml">
+      <configuration name="ManageThreadsTest.an_authenticated_user_can_update_his_thread" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_a_thread_requires_a_unique_slug - 2019.07.03 at 15h 35m 49s.xml">
-      <configuration name="ManageThreadsTest.a_thread_requires_a_unique_slug" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 00m 18s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest - 2019.07.03 at 15h 35m 53s.xml">
-      <configuration name="ManageThreadsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 00m 29s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_an_authenticated_user_can_create_new_forum_threads - 2019.07.03 at 15h 38m 06s.xml">
-      <configuration name="ManageThreadsTest.an_authenticated_user_can_create_new_forum_threads" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 00m 40s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_a_thread_requires_a_unique_slug - 2019.07.03 at 15h 38m 28s.xml">
-      <configuration name="ManageThreadsTest.a_thread_requires_a_unique_slug" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 00m 43s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug - 2019.07.03 at 15h 38m 42s.xml">
-      <configuration name="ManageThreadsTest.a_thread_with_a_title_that_ends_in_a_number_should_generate_the_proper_slug" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 00m 49s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest - 2019.07.03 at 15h 38m 53s.xml">
-      <configuration name="ManageThreadsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 01m 01s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ManageThreadsTest_a_thread_requires_recaptcha_verification - 2019.07.03 at 15h 39m 06s.xml">
-      <configuration name="ManageThreadsTest.a_thread_requires_recaptcha_verification" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ManageThreadsTest_unauthorized_users_may_not_update_threads - 2019.07.03 at 17h 01m 17s.xml">
+      <configuration name="ManageThreadsTest.unauthorized_users_may_not_update_threads" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373361000" />
+    <option name="totallyTimeSpent" value="375960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,7 +498,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35796046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35379812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -823,16 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -905,16 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="170" column="53" selection-start-line="170" selection-start-column="53" selection-end-line="170" selection-end-column="53" />
-          <folding>
-            <element signature="e#33#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Rules/Recaptcha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -925,12 +896,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        <state relative-caret-position="160">
+          <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ManageThreadsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+          <folding>
+            <element signature="e#33#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

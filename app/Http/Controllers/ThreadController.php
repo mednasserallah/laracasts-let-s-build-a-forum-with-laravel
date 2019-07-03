@@ -76,6 +76,28 @@ class ThreadController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     *
+     * @param $channel
+     * @param Thread $thread
+     * @param  \Illuminate\Http\Request $request
+     * @return void
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function update($channel, Thread $thread, Request $request)
+    {
+        $this->authorize('update', $thread);
+
+        $data = $this->validate($request, [
+            'title' => ['required', 'string', new SpamFree],
+            'body' => ['required', 'string', new SpamFree],
+        ]);
+
+        $thread->update($data);
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param Thread $thread
