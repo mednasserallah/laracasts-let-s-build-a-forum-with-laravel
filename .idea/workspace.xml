@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2601e02c-3fa0-45aa-b5f0-1514cba61f81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ThreadFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ThreadFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/Thread.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Thread.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/LockThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LockThreadTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ThreadTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/create.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,27 +22,63 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/pages/Thread.vue">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/LockThreadTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="187">
+              <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
               <folding>
-                <element signature="e#37#81#0" expanded="true" />
+                <element signature="e#34#53#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            <state relative-caret-position="827">
+              <caret line="46" column="16" selection-start-line="46" selection-end-line="46" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/threads/create.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="51" column="94" lean-forward="true" selection-start-line="51" selection-start-column="94" selection-end-line="51" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="60" column="11" lean-forward="true" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
               <folding>
-                <element signature="e#40#55#0#PHP" expanded="true" />
+                <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -59,7 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get</find>
       <find>looda</find>
       <find>ava</find>
       <find>&quot;threads.{$this-&gt;id}.visits&quot;</find>
@@ -89,6 +123,7 @@
       <find>threads</find>
       <find>sus</find>
       <find>lock</find>
+      <find>form</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -103,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserController.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/AddAvatarTest.php" />
-        <option value="$PROJECT_DIR$/app/Policies/UserPolicy.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" />
         <option value="$PROJECT_DIR$/resources/views/profiles/show.blade.php" />
@@ -118,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/Visits.php" />
         <option value="$PROJECT_DIR$/app/RecordVisits.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ReadThreadsTest.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/SubscribeToThreadTest.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/list.blade.php" />
@@ -145,7 +176,6 @@
         <option value="$PROJECT_DIR$/resources/js/components/SubscibeButton.vue" />
         <option value="$PROJECT_DIR$/resources/js/authorizations.js" />
         <option value="$PROJECT_DIR$/resources/js/components/Replies.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
         <option value="$PROJECT_DIR$/resources/views/threads/show.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/ThreadFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/LockThreadTest.php" />
@@ -154,6 +184,11 @@
         <option value="$PROJECT_DIR$/tests/Unit/ThreadTest.php" />
         <option value="$PROJECT_DIR$/app/Thread.php" />
         <option value="$PROJECT_DIR$/resources/js/pages/Thread.vue" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/config/services.php" />
+        <option value="$PROJECT_DIR$/resources/views/threads/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" />
       </list>
     </option>
   </component>
@@ -247,6 +282,13 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/collect" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/kitetail/zttp" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -267,6 +309,24 @@
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
               <item name="forum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forum" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forum" type="b2602c69:ProjectViewProjectNode" />
@@ -409,7 +469,8 @@
       <workItem from="1560121731715" duration="63000" />
       <workItem from="1561061087629" duration="7044000" />
       <workItem from="1561163140787" duration="138000" />
-      <workItem from="1562075146884" duration="13294000" />
+      <workItem from="1562075146884" duration="14141000" />
+      <workItem from="1562158722843" duration="2478000" />
     </task>
     <servers />
   </component>
@@ -446,7 +507,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366790000" />
+    <option name="totallyTimeSpent" value="370115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,13 +522,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.22814499" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7003122" visible="true" weight="0.23081024" />
       <window_info x="508" y="378" width="872" height="359" id="Structure" order="1" sideWeight="0.29968783" side_tool="true" type="FLOATING" weight="0.17377399" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43600416" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43600416" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,20 +572,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/MustVerifyEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/SubscribeToThreadTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/ReplyTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -546,13 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-578">
           <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -613,13 +653,6 @@
         <state relative-caret-position="-384" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/channels.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -646,13 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="32" column="68" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -788,16 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/Replies.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -862,12 +878,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/LockThreadTest.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        <state relative-caret-position="416">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
-            <element signature="e#34#53#0#PHP" expanded="true" />
+            <element signature="e#40#55#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -882,12 +898,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LockThreadController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="179">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/LockThreadTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
           <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
+            <element signature="e#34#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="46" column="16" selection-start-line="46" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/threads/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="51" column="94" lean-forward="true" selection-start-line="51" selection-start-column="94" selection-end-line="51" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="60" column="11" lean-forward="true" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -31,6 +31,8 @@
             padding-bottom: 100px;
         }
     </style>
+
+    @yield('head')
 </head>
 <body>
     <div id="app">
