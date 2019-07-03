@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Rules\Recaptcha;
 use App\Thread;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -9,7 +10,18 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ManageThreadsTest extends TestCase
 {
     use RefreshDatabase;
-    
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        app()->singleton(Recaptcha::class, function () {
+           return \Mockery::mock(Recaptcha::class, function ($m) {
+               $m->shouldReceive('passes')->andReturn(true);
+           });
+        });
+    }
+
     /** @test */
     public function guests_cannot_see_the_create_thread_page()
     {
@@ -47,10 +59,9 @@ class ManageThreadsTest extends TestCase
 
         $this->assertEquals('thread-title', $thread->slug);
 
-        $this->post(route('threads.store'), $thread->toArray());
+        $this->post(route('threads.store'), $thread->toArray() + ['g-recaptcha-response' => 'token']);
 
         $this->assertTrue(Thread::whereSlug('thread-title-2')->exists());
-
     }
     
     /** @test */
@@ -63,7 +74,7 @@ class ManageThreadsTest extends TestCase
             'slug' => 'thread-title-2019'
         ]);
 
-        $this->post(route('threads.store'), $thread->toArray());
+        $this->post(route('threads.store'), $thread->toArray() + ['g-recaptcha-response' => 'token']);
 
         $this->assertTrue(Thread::whereSlug('thread-title-2019-2')->exists());
     }
@@ -75,7 +86,7 @@ class ManageThreadsTest extends TestCase
 
         $thread = factory('App\Thread')->make();
 
-        $response = $this->post('/threads', $thread->toArray());
+        $response = $this->post('/threads', $thread->toArray() + ['g-recaptcha-response' => 'token']);
 
         $this->get($response->headers->get('Location'))
             ->assertSee($thread->title)
@@ -150,6 +161,15 @@ class ManageThreadsTest extends TestCase
     {
         $this->publishThread(['body' => null])
             ->assertSessionHasErrors('body');
+    }
+
+    /** @test */
+    public function a_thread_requires_recaptcha_verification()
+    {
+        unset(app()[Recaptcha::class]);
+
+        $this->publishThread(['g-recaptcha-response' => 'wrong-recaptcha'])
+            ->assertSessionHasErrors('g-recaptcha-response');
     }
 
     /** @test */
