@@ -2503,16 +2503,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      title: this.thread.title,
+      body: this.thread.body,
       repliesCount: this.thread.replies_count,
       isLocked: this.thread.is_locked,
-      editing: false
+      editing: false,
+      form: this.resetForm()
     };
   },
   methods: {
+    resetForm: function resetForm() {
+      return {
+        title: this.thread.title,
+        body: this.thread.body
+      };
+    },
     lock: function lock() {
       var _this = this;
 
-      axios.post('/lock-threads/' + this.thread.slug).then(function () {
+      var url = '/lock-threads/' + this.thread.slug;
+      axios.post(url).then(function () {
         _this.isLocked = true;
       });
     },
@@ -2529,6 +2539,24 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.lock();
       }
+    },
+    update: function update() {
+      var _this3 = this;
+
+      var url = "/threads/".concat(this.thread.channel.slug, "/").concat(this.thread.slug);
+      axios.patch(url, this.form).then(function () {
+        _this3.title = _this3.form.title;
+        _this3.body = _this3.form.body;
+        _this3.editing = false;
+        flash('Your thread has been updated!');
+      });
+    },
+    editOrCancel: function editOrCancel() {
+      if (this.editing) {
+        this.form = this.resetForm();
+      }
+
+      this.editing = !this.editing;
     }
   }
 });

@@ -3,22 +3,22 @@
     <div class="card-header">
 
         <div class="form-group">
-            <input type="text" class="form-control" value="{{ $thread->title }}">
+            <input type="text" class="form-control" v-model="form.title">
         </div>
 
     </div>
 
     <div class="card-body">
         <div class="form-group">
-            <textarea class="form-control" rows="8">{{ $thread->body }}</textarea>
+            <textarea class="form-control" rows="8" v-model="form.body"></textarea>
         </div>
     </div>
 
     @can ('update', $thread)
         <div class="card-footer">
-            <button class="btn btn-outline-primary" @click="editing = !editing" v-text="editing ? 'Cancel' : 'Edit'"></button>
+            <button class="btn btn-outline-primary" @click="editOrCancel" v-text="editing ? 'Cancel' : 'Edit'"></button>
 
-            <button v-if="editing" class="btn btn-primary float-right">Update</button>
+            <button v-if="editing" @click="update" class="btn btn-primary float-right">Update</button>
 
         </div>
     @endcan
@@ -31,15 +31,13 @@
 
         <img class="float-left mr-3" src="{{ $thread->creator->avatar() }}" alt="user avatar" width="50">
 
-        <div class="float-left">
-            {{ $thread->title }}
-        </div>
+        <div class="float-left" v-text="title"></div>
 
     </div>
 
     <div class="card-body">
         <article>
-            <div class="card-text">{{ $thread->body }}</div>
+            <div class="card-text" v-text="body"></div>
         </article>
     </div>
 

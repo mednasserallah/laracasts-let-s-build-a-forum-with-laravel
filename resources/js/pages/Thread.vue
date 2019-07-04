@@ -17,16 +17,30 @@
 
         data() {
             return {
+                title: this.thread.title,
+                body: this.thread.body,
+
                 repliesCount: this.thread.replies_count,
                 isLocked: this.thread.is_locked,
-                editing: false
+                editing: false,
+
+                form: this.resetForm()
             }
         },
 
         methods: {
+            resetForm() {
+                return {
+                    title: this.thread.title,
+                    body: this.thread.body
+                }
+            },
+
             lock() {
+                let url = '/lock-threads/' + this.thread.slug;
+
                 axios
-                    .post('/lock-threads/' + this.thread.slug)
+                    .post(url)
                     .then(() => {
                         this.isLocked = true;
                     })
@@ -46,9 +60,29 @@
                 } else {
                     this.lock()
                 }
+            },
+
+            update() {
+                let url = `/threads/${this.thread.channel.slug}/${this.thread.slug}`;
+
+                axios
+                    .patch(url, this.form)
+                    .then(() => {
+                        this.title = this.form.title;
+                        this.body = this.form.body;
+                        this.editing = false;
+                        flash('Your thread has been updated!');
+                    });
+
+            },
+
+            editOrCancel() {
+                if (this.editing) {
+                    this.form = this.resetForm();
+                }
+
+                this.editing = !this.editing;
             }
-
-
         },
     }
 </script>
