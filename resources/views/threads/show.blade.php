@@ -5,34 +5,7 @@
         <div class="container">
             <div class="row ">
                 <div class="col col-md-8">
-                    <div class="card mb-4">
-                        <div class="card-header">
-
-                            <img class="float-left mr-3" src="{{ $thread->creator->avatar() }}" alt="user avatar" width="50">
-
-                            <div class="float-left">
-                                {{ $thread->title }}
-                            </div>
-
-                            @can ('delete', $thread)
-                                <div class="float-right">
-                                    <form method="POST" action="{{ route('threads.destroy', [$thread->channel->slug, $thread->id]) }}">
-                                        @method('DELETE')
-                                        @csrf
-
-                                        <button type="submit">Delete</button>
-                                    </form>
-                                </div>
-                            @endcan
-
-                        </div>
-
-                        <div class="card-body">
-                            <article>
-                                <div class="card-text">{{ $thread->body }}</div>
-                            </article>
-                        </div>
-                    </div>
+                    @include('threads._thread')
 
                     <replies @reply-removed="repliesCount--"
                              @reply-added="repliesCount++"

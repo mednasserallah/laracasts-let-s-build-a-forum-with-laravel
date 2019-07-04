@@ -18,7 +18,8 @@
         data() {
             return {
                 repliesCount: this.thread.replies_count,
-                isLocked: this.thread.is_locked
+                isLocked: this.thread.is_locked,
+                editing: false
             }
         },
 

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
 
             <div class="col-md-8">
-                @include('threads.list')
+                @include('threads._list')
 
                 {{ $threads->links() }}
             </div>
