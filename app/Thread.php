@@ -5,10 +5,12 @@ namespace App;
 use App\Events\ThreadHasNewReply;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Laravel\Scout\Searchable;
 
 class Thread extends Model
 {
     use RecordActivity;
+    use Searchable;
 
     protected static function boot()
     {

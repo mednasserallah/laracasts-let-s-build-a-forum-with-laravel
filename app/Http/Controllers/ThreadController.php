@@ -58,7 +58,7 @@ class ThreadController extends Controller
             'title' => ['required', 'string', new SpamFree],
             'body' => ['required', 'string', new SpamFree],
             'channel_id' => 'required|integer|exists:channels,id',
-            'g-recaptcha-response' => [$recaptcha]
+            'g-recaptcha-response' => ['required', $recaptcha]
         ]);
 
         $thread = Thread::create([
