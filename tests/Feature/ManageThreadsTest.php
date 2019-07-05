@@ -74,7 +74,7 @@ class ManageThreadsTest extends TestCase
             'slug' => 'thread-title-2019'
         ]);
 
-        $this->post(route('threads.store'), $thread->toArray());
+        $this->post(route('threads.store'), $thread->toArray() + ['g-recaptcha-response' => 'PASS-FOR-TEST']);
 
         $this->assertTrue(Thread::whereSlug('thread-title-2019-2')->exists());
     }
@@ -86,7 +86,7 @@ class ManageThreadsTest extends TestCase
 
         $thread = factory('App\Thread')->make();
 
-        $response = $this->post('/threads', $thread->toArray());
+        $response = $this->post('/threads', $thread->toArray() + ['g-recaptcha-response' => 'PASS-FOR-TEST']);
 
         $this->get($response->headers->get('Location'))
             ->assertSee($thread->title)

@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::get('api/users', 'Api\UserController@index')->middleware('api');
 Route::post('api/users/{user}/avatar', 'Api\UserAvatarController@store')->name('users.avatars')->middleware(['api', 'auth']);
 
+Route::get('/threads/search', 'SearchController@show');
+
 Route::get('/threads', 'ThreadController@index')->name('threads.index');
 Route::get('/threads/create', 'ThreadController@create')->name('threads.create')->middleware('auth');;
 Route::get('/threads/{channel}', 'ThreadController@index')->name('threads.channel.index');
@@ -26,7 +28,6 @@ Route::get('/threads/{channel}/{thread}', 'ThreadController@show')->name('thread
 Route::delete('/threads/{channel}/{thread}', 'ThreadController@destroy')->name('threads.destroy')->middleware('auth');
 Route::post('/threads', 'ThreadController@store')->name('threads.store')->middleware(['auth', 'verified']);
 Route::patch('/threads/{channel}/{thread}', 'ThreadController@update')->name('threads.update')->middleware(['auth', 'verified']);
-
 
 Route::post('/lock-threads/{thread}', 'LockThreadController@store')->name('lock-threads.store')->middleware(['auth', 'admin']);;
 Route::delete('/lock-threads/{thread}', 'LockThreadController@destroy')->name('lock-threads.destroy')->middleware(['auth', 'admin']);;

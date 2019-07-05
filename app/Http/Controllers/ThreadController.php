@@ -18,6 +18,7 @@ class ThreadController extends Controller
      *
      * @param Channel $channel
      * @param ThreadFilter $filters
+     * @param Trending $trending
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function index(Channel $channel, ThreadFilter $filters, Trending $trending)
