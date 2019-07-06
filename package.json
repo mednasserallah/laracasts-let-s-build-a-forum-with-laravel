@@ -27,6 +27,7 @@
         "@fortawesome/fontawesome-free": "^5.8.1",
         "moment": "^2.24.0",
         "textarea-caret": "^3.1.0",
-        "vue-at": "^2.3.2"
+        "vue-at": "^2.3.2",
+        "vue-instantsearch": "^2.2.1"
     }
 }
